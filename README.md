@@ -1,23 +1,23 @@
 个人简历丨张大漾   
 ========  
-*23岁丨本科丨两年工作经验丨18758302302丨1417376255@qq.com  
-*目前所在城市：杭州市  
-*期望工作地点：杭州主城区  
-*期望职业：前端开发工程师  
-*期望行业：智能家居、手游类、计算机软件、互联网  
+23岁丨本科丨两年工作经验丨18758302302丨1417376255@qq.com  
+目前所在城市：杭州市  
+期望工作地点：杭州主城区  
+期望职业：前端开发工程师  
+期望行业：智能家居、手游类、计算机软件、互联网  
   
 ##自我介绍
 我热爱计算机、互联网技术，具有较强的框架思维和模仿创新能力。喜欢学习研究最新的Web技术并动手操作在自己的网站、APP等作品中实现这个新功能。读十本书不如亲自做一个网站，为了将自己所学的能得到应用，也同时可以记录自己学习研究、技术开发中心得感想，于是做了一个技术综合型网站：http://yhtml5.com
 
 ##技术能力
--操作系统： Windows7、Windows server 2008(阿里云ECS)  
--开发工具： SublimeText3、AppcanIDE、Eclipse、AdobeDreaamwear、AdobePhotoshop、AdobeCAD、Notepad++...  
--前端开发： HTML5、Css、JavaScript、Json、Ajax、FireBug、ChromeDevTools  
--开发框架：jQuery、jQueryEasyUI、Bootstrap、font-awesome（字体图标）、Wordpress（开源的php框架）  
--后端运维：PHP、Apache、mySQL、XAMPP  
--Web 相关：Github、Svn、Ftp、WordPressCMS、网站运营、SEO优化 
--网络通信：路由器交换机、无线局域网构建、计算机网络、RF射频、WIFI  
--其他技术：WCDMA、综合布线、智能家居、C++（大学课程）、java（大学课程）  
+**操作系统**： Windows7、Windows server 2008(阿里云ECS)  
+**开发工具**： SublimeText3、AppcanIDE、Eclipse、AdobeDreaamwear、AdobePhotoshop、AdobeCAD、Notepad++...  
+**前端开发**： HTML5、Css、JavaScript、Json、Ajax、FireBug、ChromeDevTools  
+**开发框架**：jQuery、jQueryEasyUI、Bootstrap、font-awesome（字体图标）、Wordpress（开源的php框架）  
+**后端运维**：PHP、Apache、mySQL、XAMPP  
+**Web 相关**：Github、Svn、Ftp、WordPressCMS、网站运营、SEO优化  
+**网络通信**：路由器交换机、无线局域网构建、计算机网络、RF射频、WIFI  
+**其他技术**：WCDMA、综合布线、智能家居、C++（大学课程）、java（大学课程）  
 
 ##教育经历
 
