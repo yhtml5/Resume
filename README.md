@@ -10,7 +10,7 @@
 我热爱计算机、互联网技术，具有较强的框架思维和模仿创新能力。喜欢学习研究最新的Web技术并动手操作在自己的网站、APP等作品中实现这个新功能。读十本书不如亲自做一个网站，为了将自己所学的能得到应用，也同时可以记录自己学习研究、技术开发中心得感想，于是做了一个技术综合型网站：http://yhtml5.com  
 
 ##技术能力
-**操作系统**： Windows7、Windows server 2008(阿里云ECS)  
+**操作系统**： Windows7、Windows server 2008(阿里云ECS)、centos  
 **开发工具**： SublimeText3、AppcanIDE、Eclipse、AdobeDreaamwear、AdobePhotoshop、AdobeCAD、Notepad++...  
 **前端开发**： HTML5、Css、JavaScript、Json、Ajax、FireBug、ChromeDevTools  
 **开发框架**：jQuery、jQueryEasyUI、Bootstrap、font-awesome（字体图标）、Wordpress（开源的php框架）  
