@@ -20,8 +20,10 @@
 1. 能根据项目特点,产品需求进行前端技术选型.能独立完成一套前端项目.包括页面UI组件开发,前后端数据通讯. 能带前端团队
 2. 有自己一套前端开发工作流[YHTML5-Seed]; 基于NodeJs+Npm+Bower+Fis3的一套前端脚手架 目前已在github上开源.  
 3. 俩套基于[YHTML5-Seed]工作流的技术栈:  
-    > Angular + Angular-UI-Router + Angular-Bootstrap + Angular Plugins...
+    > Angular + Angular-UI-Router + Angular-Bootstrap + Angular Plugins...    
+    
     > JQuery + Bootstrap + Html5shim + JQuery Plugins...  
+    
 4. 对前端技术非常执着; 会合理使用前沿的前端技术, 使团队开发更加具有效率, 极致优化产品性能. 同时提高产品的体验感,维护性,稳定性,
 
 ### 我的不足
