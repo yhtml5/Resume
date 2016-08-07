@@ -1,53 +1,297 @@
-个人简历丨张大漾   
-========  
-- 24岁丨本科丨两年工作经验丨18758302302丨1417376255@qq.com  
+# 前端开发工程师丨张大漾丨[Github]
+
+![author] ![npm version] ![node version] ![Build Status] ![downloads total] 
+
+- 25岁丨本科丨两年开发经验丨18758302302丨1417376255@qq.com  
 - 目前所在城市：杭州市  
 - 期望工作地点：杭州主城区  
-- 期望职业：前端开发工程师  
+- 期望职业：前端开发工程师, 无线前端工程师, javascript工程师  
 - 期望行业：智能家居、手游类、计算机软件、互联网、移动开发  
 
-##自我介绍  
-我热爱计算机、互联网技术，具有较强的框架思维和模仿创新能力。喜欢学习研究最新的Web技术并动手操作在自己的网站、APP等作品中实现这个新功能。读十本书不如亲自做一个网站，为了将自己所学的能得到应用，也同时可以记录自己学习研究、技术开发中心得感想，于是做了一个技术综合型网站：http://yhtml5.com  
+## 自我介绍  
+本人热爱计算机、互联网技术，具有较强的框架思维和模仿创新能力。
+喜欢学习研究最新的Web技术并动手操作在自己的网站、APP等作品中实现这些新功能。
+读十本书不如亲自做一个网站，为了将自己所学的能得到应用，也同时可以记录自己学习研究、技术开发中的心得感想，
+于是做了一个[技术综合型网站],(目前用angular重构中,您可以随时关注项目进程)  
 
-##技术能力
-**操作系统**： Windows7、Windows server 2008(阿里云ECS)、centos  
-**开发工具**： SublimeText3、AppcanIDE、Eclipse、AdobeDreaamwear、AdobePhotoshop、AdobeCAD、Notepad++...  
-**前端开发**： HTML5、Css、JavaScript、Json、Ajax、FireBug、ChromeDevTools  
-**开发框架**：jQuery、jQueryEasyUI、Bootstrap、font-awesome（字体图标）、Wordpress（开源的php框架）  
-**后端运维**：PHP、Apache、mySQL、XAMPP  
-**Web 相关**：Github、Svn、Ftp、WordPressCMS、网站运营、SEO优化  
-**网络通信**：路由器交换机、无线局域网构建、计算机网络、RF射频、WIFI  
-**其他技术**：WCDMA、综合布线、智能家居、C++（大学课程）、java（大学课程）  
 
-##教育经历
+### 我的优势
+1. 能根据项目特点,产品需求进行前端技术选型.能独立完成一套前端项目.包括页面UI组件开发,前后端数据通讯. 能带前端团队
+2. 有自己一套前端开发工作流[YHTML5-Seed]; 基于NodeJs+Npm+Bower+Fis3的一套前端脚手架 目前已在github上开源.  
+3. 俩套基于[YHTML5-Seed]工作流的技术栈:  
+    > Angular + Angular-UI-Router + Angular-Bootstrap + Angular Plugins...
+    > JQuery + Bootstrap + Html5shim + JQuery Plugins...  
+4. 对前端技术非常执着; 会合理使用前沿的前端技术, 使团队开发更加具有效率, 极致优化产品性能. 同时提高产品的体验感,维护性,稳定性,
 
-2010.9-2014.6丨浙江万里学院丨通信工程丨本科  
+### 我的不足
+* 技术广而不精; 在追求开发速度,产品快速开发迭代的大环境下,自己对技术底层少了关注. 
+* 全栈能力欠缺; 欠缺服务端开发经验, 尤其是客户端与服务端数据通讯
+ 
 
-##培训经历
+### 技术能力    
+**基础能力**: HTML/CSS/Javascript, MarkDown, json ...
+**类库框架**: AngularJS, Bootstrap, jQuery, Echarts ...
+**前端构建**: NodeJs, Npm, Bower, Fis3, Git ...
+**后端能力**: PHP, Apache, mySQL, XAMPP, Wordpress  ...
+**网站相关**: SEO优化, 性能优化, CDN ... 
+**开发工具**: MAC OSX, Webstorm IDE/HBuilder/Xcode, ChromeDevTools/FireBug, Git/SVN ...
 
-- 2015.6（3天）丨杭州AppCan移动开发技术培训丨培训内容：  
-通过3天“美食”APP开发培训与交流，我了解AppCan是一个能用HTML+CSS+JS开发移动软件的平台，初步掌握使用平台开发APP流程，包括创建及同步项目、模拟器调试，真机调试及断点调试、UI框架、JS SDK、插件调用、数据获取、云端编译及打包。  
-- 2015.3-2015.7丨极客学院丨WEB大前端工程师职业路劲图丨教程内容：
-极客学院的前端开发视频教程集合了html、css、JavaScript知识，还有Bootstrap、jQuery等等流行的框架。我受益非常大，有了Node.js,连php都能代替。还有一些项目构建和实战开发等等高级应用知识。  
-- 2013.6-2013.12丨达内Web前端培训（校企合作课程）丨培训内容：
-大学时期，我通过校企合作的前端课程，系统性的学习HTML从入门到精通的基础知识。包括：掌握HTML标签及其属性的使用；CSS样式与选择器，通过DIV+CSS完成不同需求的样式和布局；轻量级的编程语言JavaScript。  
-- 2011.6-2011.12丨浙江万里KAB创业俱乐部丨培训内容：
-培养学院的创业意识，正确认识企业在社会中的作用，了解创办和经营企业的基本知识,提升我们的创业能力和就业能力。  
 
-###个人作品A
+### 技术详情   
 
-- 洋葱官网丨yhtml5.com  
-网站框架图丨网站阶段图丨开发进程  
-	洋葱官网是一个专注于HTML5前端技术的网络资源平台， 为广大互联网爱好者分享最有价值的IT文章， 展示最酷炫的源代码，分享最新的技术知识。我们追求技术自由及对智慧成果共享精神。洋葱网所有的代码（遵循 GNU 通用公共许可协议）都放在github社区上。诚信很重要，这里先放一个域名所有者查询，后面作品展示中有我的开发过程。
-	为了节省您宝贵的时间，这里将不在赘述，详细内容欢迎您登录我的个人网站浏览。  
+**前端架构方面**
+* 熟练使用npm, 进行js包管理
+* 精通bower, 前端包管理
+* 熟悉svn, 增加,提交,更新代码等
+* 精通git, 进行代码版本管理, 包括分支管理, 搭建git服务器
+* 熟练使用markdown来编写API文档
+* 熟悉yeoman 前端脚手架工作流
+* 了解grunt/glup等前端构建工具
+* 精通FIS3, 能独立构建前端应用,为不同项目定制不同的任务逻辑,解决前端开发中自动化工具、性能优化、模块化框架、开发规范、代码部署、开发流程等问题
+* 熟练使用NodeJS, 使用基于node的开发工具  
+ 
+ **前端开发方面**
 
-###个人作品B
 
+
+
+
+您可以访问[YHTML5-Tutorial], 关注我最新学习情况
+
+## 项目经验
+
+### [YHTML5-Seed]
+技术标签: NodeJs, Npm, Fis3, bower, Git, Angular, Bootstrap, jQuery
+
+## YHTML5-Seed
+
+
+YHTML5-Seed是一个前端脚手架. 我们可以借助这个种子项目来构建一个全新的前端应用. 
+你可能需要根据具体的项目进行相关的任务搭建和包依赖管理.
+               
+![npm version] ![node version] ![Build Status] ![downloads total] ![author]
+
+
+### 快速链接
+- [项目简介](#项目简介)
+    - [项目特点](#项目特点)
+    - [浏览器兼容](#浏览器兼容)
+    - [目录布局](#目录布局)
+    - [入门指南](#入门指南)
+    - [开发环境](#开发环境)
+    - [克隆Dashboard](#克隆Dashboard)
+    - [安装依赖](#安装依赖)
+    - [运行应用程序](#运行应用程序)
+    - [项目进展]
+    - [版本历史](https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md)
+    - [issue]
+    
+
+## 项目简介
+
+### 项目特点
+  * 遵循百度前端开发规范
+  * 使用npm全自动安装所依赖的包
+  * 样式结构、模板引擎、业务逻辑解耦
+  * 前后端分离，使用json等交互数据
+  * 全端支持，全面支持浏览器、IOS、Android、HybirdApp、windows、Mac、Linux、TV
+  * Etc,etc
+
+### 技术栈
+
+有一些技术堆栈开发的Web应用程序：
+
+#### 
+
+  * AngularJS
+  * AngularUI
+  * AngularUI-bootstrap
+  * AngularUI-Router
+  * Bootstrap
+  * EchartJS 
+  * Fis3
+  * html5-boilerplate
+  * ProtractorJS
+  * NodeJS 
+
+### 浏览器兼容性
+  * modern browsers: chrome, firefox, safari, Microsoft Edge  
+  * IE8+
+  * Etc,etc
+
+#### [版本历史]
+#### [issue]
+#### [项目进展]
+
+## 入门指南
+
+开始你可以简单克隆angular-seed库和安装依赖关系：
+
+### 开发环境
+
+你需要git去克隆Dashboard库。你可以从http://git-scm.com/得到git
+[http://git-scm.com/](http://git-scm.com/).
+
+我们也使用node.js工具初始化和测试Dashboard。你必须有node.js和npm，你可以从http://nodejs.org/得到这些
+[http://nodejs.org/](http://nodejs.org/).
+
+ 
+### 克隆Dashboard
+
+用git克隆Dashboard库
+[git][git]:
+```
+git clone https://github.com/yhtml5/YHTML5-WEB.git
+cd YHTML5-WEB\dashboard
+```
+
+如果你想开始一个没有dashboard历史命令的新项目，你可以：
+
+```bash
+git clone --depth=1 https://github.com/yhtml5/YHTML5-WEB.git <your-project-name>
+```
+
+告诉git只下拉有历史数据的命令
+
+### 安装依赖
+
+在这个项目中我们有两种依赖：工具和angular框架源码。工具帮我们管理和测试应用程序
+
+* 我们通过npm得到依赖的工具
+[node package manager][npm].
+* 我们通过bower得到angular源码
+[client-side code package manager][bower].
+
+我们能简单的用npm去自动运行bower：
+```
+npm install
+```
+
+这也叫做bower install。在你的项目里你应该能找到两个新的文件。
+
+* `node_modules`-工具包含了我们需要的npm包
+* `app/bower_components`-包含了angular框架文件
+
+
+*注意`bower_components`文件通常被安装在根文件夹，但dashboard改变位置通过`.bowerrc`文件。
+把它放在app文件夹中，更容易通过网络服务提供文件。*
+
+
+
+### 服务应用程序文件
+
+AngularHS的client-side-only技术可能创建AngularJS webapps而不需要一个后端的服务器，
+我们推荐服务项目文件使用一个本地的服务器在开发过程中避免在浏览器中的安全限制。
+sandbox实现在浏览器之间有所不同，但往往防止一些像cookies，xhr等，当一个html页面通过一个文件打开才能正常工作而不是http的方案
+
+
+### 运行应用程序
+
+我们已经配置了一个简单的开发web服务的项目。最简单的方法开始这个服务：
+
+```
+cd YHTML5-WEB\dashboard\app 
+fis3 server start
+fis3 release -wl
+```
+
+Now browse to the app at `http://localhost:8080`.
+
+### 目录布局
+
+```
+YHTML5-Seed
+|____app                              --> all of the source files for the application
+| |____index.html                     --> app layout file (the main html template file of the app)
+| |____fis-conf.js                    --> fis3 配置文件
+| |____bower.json                     --> bower package manager
+| |____bower_components               --> custom comonents for project
+| |____map.json
+| |____components
+| | |____css                          --> app's stylesheet
+| | | |____angular.css                --> angular 特有样式
+| | | |____animation.css              --> animation css
+| | | |____base.css                   --> 基础css属性
+| | | |____bootstrap.base.css
+| | | |____bootstrap.component.css
+| | | |____box.css
+| | | |____custom.css
+| | |____head
+| | | |____index.html
+| | | |____shortcut-icon.png
+| | |____js
+| | | |____ctrl.js
+| | | |____directive.js
+| | | |____filter.js
+| | | |____router.js
+| | |____iconfont
+| | |____ie
+| | |____public
+| | |____require
+| |____server
+| | |____author.css
+| | |____author.js
+| | |____console.js
+| |____view
+| | |____browsehappy
+| | |____nav
+| | | |____index.html
+|____blog.md
+|____issue.md
+|____LICENSE
+|____package.json
+|____progress.md
+|____README.md             
+|____README_ZH.md
+|____node_modules    
+|____dist                             --> 产品发布目录
+```
+
+
+
+
+
+
+
+
+### [聚宝云计费]
+技术标签: WEB, CDN AngularJs, Bootstrap, Fis3, Json
+
+
+### [聚宝商户后台]
+技术标签:Java, VM, jQuery, 
+
+
+
+### [收款宝-OA后台]
+**技术标签: 移动端, webview,**
+
+
+### [没白走]
+**技术标签: 移动端, webview,**
+
+
+
+### [洋葱官网]
+**技术标签: Axure, Photoshop, Processon, Angular, NodeJs, Github, ESC, Centos**
+
+#### 网站框架图丨网站阶段图丨开发进程  
+
+洋葱官网是一个专注于HTML5前端技术的网络资源平台， 为广大互联网爱好者分享最有价值的IT文章， 展示最酷炫的源代码，分享最新的技术知识。
+我们追求技术自由及对智慧成果共享精神。洋葱网前端代码托管于github上。
+为了节省您宝贵的时间，这里将不在赘述，详细内容欢迎您登录我的个人网站浏览。目前使用Angular重构中... 
+
+
+	
+
+### 个人作品B
 - HTML5源码丨APP下载地址  
 因为未来是移动互联网时代，软件是直接与客户接触的元素。于是我动手写了一个简单的APP。在基于W3C标准上，我查阅了许多参考教程，做的一个HTML5源码。在这里可以查阅HTML标签、元素、属性，还有大量前端资讯与经典案例。是前端开发者的好帮手。
 为了节省您宝贵的时间，这里将不在赘述。欢迎您下载本人开发的《HTML5源码》APP软件体验。
 
-##工作经历
+
+
+### 工作经历
 
 **2015.10-至今丨浙江凡伟科技有限公司丨前端开发工程师**  
 主要负责页面重构、移动Hybird App内嵌页面开发、公司网站前后端数据交互等工作。还有设计需求修改、Bug修复。公司有技术大牛，经常一起谈论解决技术上的难题。  
@@ -73,12 +317,43 @@
 
 **相关技术：**mySQL、ERP软件  
 
-##作品展示
-软件开发丨HTML源码 主界面
+### 培训经历
 
-作品板块编辑中……
+- 2015.6（3天）丨杭州AppCan移动开发技术培训丨培训内容：  
+通过3天“美食”APP开发培训与交流，我了解AppCan是一个能用HTML+CSS+JS开发移动软件的平台，初步掌握使用平台开发APP流程，包括创建及同步项目、模拟器调试，真机调试及断点调试、UI框架、JS SDK、插件调用、数据获取、云端编译及打包。  
+- 2015.3-2015.7丨极客学院丨WEB大前端工程师职业路劲图丨教程内容：
+极客学院的前端开发视频教程集合了html、css、JavaScript知识，还有Bootstrap、jQuery等等流行的框架。我受益非常大，有了Node.js,连php都能代替。还有一些项目构建和实战开发等等高级应用知识。  
+- 2013.6-2013.12丨达内Web前端培训（校企合作课程）丨培训内容：
+大学时期，我通过校企合作的前端课程，系统性的学习HTML从入门到精通的基础知识。包括：掌握HTML标签及其属性的使用；CSS样式与选择器，通过DIV+CSS完成不同需求的样式和布局；轻量级的编程语言JavaScript。  
+- 2011.6-2011.12丨浙江万里KAB创业俱乐部丨培训内容：
+培养学院的创业意识，正确认识企业在社会中的作用，了解创办和经营企业的基本知识,提升我们的创业能力和就业能力。  
 
-软件开发丨HTML源码开发界面
+### 教育经历
 
-作品板块编辑中……
+2010.9-2014.6丨浙江万里学院丨通信工程丨本科  
  
+ 
+[author]:https://img.shields.io/badge/author-yhtml5-blue.svg
+[bower]: http://bower.io
+[Build Status]:https://img.shields.io/travis/twbs/bootstrap/master.svg
+[changeLog]:https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md
+[downloads total]:https://img.shields.io/github/downloads/atom/atom/total.svg
+[git]: http://git-scm.com/
+[Github]:https://github.com/yhtml5
+[issue]:https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md
+[jasmine]: http://jasmine.github.io
+[karma]: http://karma-runner.github.io
+[npm]: https://www.npmjs.org/
+[npm version]:https://img.shields.io/npm/v/npm.svg
+[node]: http://nodejs.org
+[node version]:https://img.shields.io/badge/node-v4.3.2-blue.svg
+[problem]:https://github.com/yhtml5/FW-Dashboard/blob/master/question.md
+[project progress]:https://github.com/yhtml5/FW-Dashboard/issues?q=%E4%BB%BB%E5%8A%A1+is%3Aopen
+[protractor]: https://github.com/angular/protractor
+[YHTML5-Seed]:https://github.com/yhtml5/YHTML5-Seed
+[YHTML5-Tutorial]:https://github.com/yhtml5/YHTML5-Tutorial
+[技术综合型网站]:http://yhtml5.com
+[聚宝云计费]:https://jubaopay.com
+[聚宝商户后台]:
+[收款宝-OA后台]:
+[洋葱官网]:http://yhtml5.com
