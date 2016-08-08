@@ -87,16 +87,20 @@ YHTML5-Seed是一个开源的前端脚手架. 它规定了命名标准, API风�
 
 
 
-### [云计费官网]
-**技术标签: WEB, CDN, AngularJs, Bootstrap, Fis3, Json**
+### [云计费官网]  
+
+**技术标签: WEB, CDN, AngularJs, Bootstrap, Fis3, Json**  
+
 1. 云计费官网是公司的官网,根据项目计划,对官网进行重构. 与项目经理一同制定项目计划,负责对网站的全部内容的开发
 2. 与设计师,产品经理沟通,参与产品的功能设计, 视觉设计
 3. 搭建项目架构, 开发UI组件, 模块化开发, 动态渲染HTML界面
 4. 来自的[Gtmetrix]评测,**前端性能提高1000%**; http请求从42个降到6个, 页面加载全部完成从原先的8秒到0.8秒, YSlow Score评分从D升到A
  
 
-### [商户后台]
-**技术标签: WEB, HTTP, Json, Angular, Bootstrap, Photoshop**
+### [商户后台]  
+
+**技术标签: WEB, HTTP, Json, Angular, Bootstrap, Photoshop**  
+
 商户后台是针对支付SDK商户的后台CMS系统, 是一个完整的CURD软件. 
 1. 根据产品文档, 构建完整的**前端界面路由系统**,搭建本地服务器,模拟服务端数据
 2. 与设计师一起, 设计开发前端页面
@@ -106,7 +110,9 @@ YHTML5-Seed是一个开源的前端脚手架. 它规定了命名标准, API风�
 
 
 ### [OA后台]
-**技术标签: WEB, J2EE, VM, jQuery, Bootstrap**
+
+**技术标签: WEB, J2EE, VM, jQuery, Bootstrap**  
+
 收款宝是针对大客户的后台OA系统, 采用J2EE开发模式,前端提供一套完整的页面模板
 1. 根据项目计划, 对业务需求进行系统分析, 与产品经理一同制定开发计划, 并带领前端团队完成方案设计及系统开发
 2. 根据成员能力, 分配力所能及的任务. 审核前端开发团队的代码
@@ -115,14 +121,17 @@ YHTML5-Seed是一个开源的前端脚手架. 它规定了命名标准, API风�
 
 
 ### [SDK应用]
-**技术标签: 移动端, webview, 响应式, Hybrid**
+
+**技术标签: 移动端, webview, 响应式, Hybrid**  
+
 SDK应用是嵌入在各种APP的SPA应用, 当用户需要支付时候调用
 1. 响应式设计, 使用@media, 保证应用在320px-1080px的移动终端上显示正常,美观
 2. 开发项目所有的UI界面, 编写页面模板
 3. 为后台提供需要的API, 包括IOS嵌入码, 应用信息, 应用列表 
 
 
-### [洋葱官网]
+### [洋葱官网]  
+
 **技术标签: Axure, Photoshop, Processon, Angular, NodeJs, Github, ECS**
 
 #### [网站框架图]丨网站阶段图丨开发进程  
@@ -197,9 +206,10 @@ Github绝对是前端最好的大课堂. 几乎所有的前端框架,类库,项�
 [百度前端开发规范]:https://github.com/fex-team/styleguide
 [技术综合型网站]:http://yhtml5.com
 [云计费官网]:https://jubaopay.com
-[商户后台]:
-[OA后台]:
 [前端开发工作流]:http://yhtml5.com/YHTML5-Seed/
 [洋葱官网]:http://yhtml5.com
 [Gtmetrix]:https://gtmetrix.com/reports/www.jubaopay.com/1d7jgGNz
 [网站框架图]:https://www.processon.com/diagraming/577dced9e4b0ef04f280aca9
+[商户后台]:###
+[OA后台]:###
+[SDK应用]:###
