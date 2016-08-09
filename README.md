@@ -2,7 +2,7 @@
 
 ![author] ![npm version] ![node version] ![Build Status] ![downloads total] 
 
-- 25岁丨本科丨两年开发经验丨18758302302丨1417376255@qq.com丨yhtml5.com  
+- 25岁丨本科丨两年开发经验丨18758302302丨1417376255@qq.com丨[yhtml5.com]  
 - **目前所在城市**: 杭州市 
 - **期望工作地点**: 杭州市, 上海市
 - **期望职业**: 前端开发工程师, 无线前端工程师, javascript工程师  
@@ -45,8 +45,8 @@
 #### 前端开发方面
 
 * 精通html/css/js,熟练使用Webstorm编写可复用,可维护的前端代码
-* 熟练使用AngularJs, Bootstrap, Jquery 等前端框架, 并根据不同的项目进行技术选型,并开发高性能的前端项目
-* 熟练使用animate.css Echarts等类库, 增加前端应用的美观度,动画效果,交互性
+* 熟练使用AngularJs, Bootstrap, Jquery, Vue 等主流前端框架, 并根据不同的项目进行技术选型,并开发高性能的前端项目
+* 熟练使用animate.css, Echarts, vivus等类库, 增加前端应用的美观度,动画效果,交互性
 * 熟悉http协议,能用不同方式处理同源策略, 跨域请求等方式
 * 熟悉json,能使用json进行数据交互
 * 熟练使用Chrome Dev Tools 进行项目测试,联调,debug
@@ -82,7 +82,7 @@
 
 ### [YHTML5-Seed]
 
-**技术标签: NodeJs, Npm, Bower, Commanjs, Fis3, Git, Glob, Open Source**
+**技术标签: NodeJs, Npm, Bower, CommanJs, Fis3, Git, Glob, Open Source**
 
 在开发了十多个项目后, 我发现每次开始一个项目,都需要去各种官网下载所依赖的包, 重新配置FIS3前端构建任务, 甚至命名方式, 目录规范, API风格都需要重新定义
 这些简单又复杂的重复构建工作占用了我们开发太多的时间,网上虽然有yeoman, angular-seed等工作流, 但是不太适用于自己以及目前的工作环境. 于是有了这个项目, 并将会一直维护开发下去
@@ -143,13 +143,14 @@ YHTML5-Seed是一个开源的前端脚手架. 它规定了命名标准, API风�
 
 ### [SDK应用]
 
-**技术标签: 移动端, webview, 响应式, Hybrid**  
+**技术标签: Mobile, Webview, Responsive, Hybrid, Vue**  
 
 SDK应用是嵌入在各种APP的SPA应用, 当用户需要支付时候调用  
 
-1. 响应式设计, 使用@media, 保证应用在320px-1080px的移动终端上显示正常,美观
-2. 开发项目所有的UI界面, 编写页面模板
-3. 为后台提供需要的API, 包括IOS嵌入码, 应用信息, 应用列表 
+1. 响应式设计, 使用@media, 保证应用在320px-1080px的移动终端(横屏/竖屏)上显示正常,美观
+2. 开发项目所有的UI界面, 并使用VueJs编写页面模板
+3. 为后台提供需要的API, 后台只需要传入相关的IOS嵌入码, 应用信息, 应用列表即可 
+4. 高性能, 所有图片使用base64位存入js文件, js/css/html压缩合并打包成一个文件, 去除注释等等
 
 
 ### [洋葱官网]  
@@ -166,7 +167,7 @@ SDK应用是嵌入在各种APP的SPA应用, 当用户需要支付时候调用
 
 ## 培训教育  
 
-- 2015.9-至今丨[Github] 
+- 2014.9-至今丨[Github] 
 Github绝对是前端最好的大课堂. 几乎所有的前端框架,类库,项目 都在上面发布分享. 阅读如诗一般的源代码,让人收益匪浅. 您可以访问[YHTML5-Tutorial], 关注我最新学习状况  
 
 - 2015.6-2015,6丨杭州AppCan移动开发技术培训丨培训内容：  
@@ -202,15 +203,16 @@ Github绝对是前端最好的大课堂. 几乎所有的前端框架,类库,项�
 [problem]:https://github.com/yhtml5/FW-Dashboard/blob/master/question.md
 [project progress]:https://github.com/yhtml5/FW-Dashboard/issues?q=%E4%BB%BB%E5%8A%A1+is%3Aopen
 [protractor]: https://github.com/angular/protractor
+[yhtml5.com]:http://yhtml5.com
 [YHTML5-Seed]:http://yhtml5.com/YHTML5-Seed/
 [YHTML5-Tutorial]:https://github.com/yhtml5/YHTML5-Tutorial
 [百度前端开发规范]:https://github.com/fex-team/styleguide
 [技术综合型网站]:http://yhtml5.com
-[云计费官网]:https://jubaopay.com
+[云计费官网]:https://www.jubaopay.com
 [前端开发工作流]:http://yhtml5.com/YHTML5-Seed/
 [洋葱官网]:http://yhtml5.com
 [Gtmetrix]:https://gtmetrix.com/reports/www.jubaopay.com/1d7jgGNz
-[网站框架图]:https://www.processon.com/diagraming/577dced9e4b0ef04f280aca9
+[网站框架图]:http://www.processon.com/view/link/57a98897e4b02c28bf5e9923
 [商户后台]:###
 [OA后台]:###
 [SDK应用]:###
