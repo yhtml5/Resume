@@ -1,7 +1,7 @@
 # custom
 logs/*
 /node_modules/
-/*/bower_components/
+*/bower_components/
 
 tmp
 .DS_Store
@@ -10,7 +10,6 @@ tmp
 .test.html.swp
 .test.html.swo
 !.gitkeep
-
 
 # Windows image file caches
 Thumbs.db
@@ -59,4 +58,3 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-
