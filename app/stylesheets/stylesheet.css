@@ -102,9 +102,19 @@ a:hover {
     -webkit-animation: bg-generator 50s ease infinite;
     transition: -webkit-filter 0.2s ease, background-image 0.2s ease;
     background-color: #1c81df;
-    background-image: linear-gradient(223deg, #155799, rgb(228, 139, 164), rgb(0, 181, 180), #159957);
-}
+    background-image: linear-gradient(223deg, #155799, #E48BA4, #00B4B4, #159957);
+    position: relative;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
 
+}
 .page-demo {
     background-image: linear-gradient(120deg, #155799, #159957);
 }
