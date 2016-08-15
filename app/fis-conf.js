@@ -4,9 +4,9 @@ fis.set('project.md5Connector ', '.');
 fis.set('project.name', 'yhtml5');
 fis.set('project.static', '/');
 fis.set('project.ignore', ['*.test.*', '*.psd', '.git/**', '/**/demo.*']);
-fis.set('project.files', [
-    '/index.html','/stylesheets/**'
-]);
+// fis.set('project.files', [
+//     '/index.html','/stylesheets/**'
+// ]);
 fis.match('/stylesheets/**', {
     release:false
 })
