@@ -38,7 +38,7 @@
     </style>
 </head>
 <body>
-<div class="container">
+<div class="container" onclick="writeIntroduction()">
     <div class="header">
         <div class="dot red js-close"></div>
         <div class="dot yellow"></div>
@@ -55,16 +55,18 @@
 </div>
 <script src="js/theater.min.js"></script>
 <script type="text/javascript">
-    var theater = theaterJS()
-    theater.addActor('output', {speed: 0.1, accuracy: 0.8})
-            .addScene('output:大家好, 我叫张大漾, 92年, 浙江温州人, 宁波读书, 杭州工作 <br><br>', 2000)
-            .addScene('平时喜欢健健身,敲敲代码,学习新技术,玩玩LOL<br><br>', 2000)
-            .addScene('从2004年开始接触FrontPage;一直断断续续与Web技术有接触直到毕业正式投入前端大坑. <br><br>', 1000)
-            .addScene('现在前端开发已经是我所热爱职业, 编程是我的信仰,<br>', 1200)
-            .addScene('做一款完整的从前端UI,数据交互到服务与数据的产品, 是我目前的追求<br><br>', 2000)
-            .addScene('最后, 很开心与大伙成为同事, 上班我们一起联调接口, 下班我们可以一起玩游戏<br><br>')
-            .addScene('谢谢大家! ')
-            .addScene(theater.stop)
+    function writeIntroduction() {
+        var theater = theaterJS()
+        theater.addActor('output', {speed: 0.1, accuracy: 0.8})
+                .addScene('output:大家好, 我叫张大漾, 92年, 浙江温州人, 宁波读书, 杭州工作 <br><br>', 2000)
+                .addScene('平时喜欢健健身,敲敲代码,学习新技术,玩玩LOL<br><br>', 2000)
+                .addScene('从2004年开始接触FrontPage;一直断断续续与Web技术有接触直到毕业正式投入前端大坑. <br><br>', 1000)
+                .addScene('现在前端开发已经是我所热爱职业, 编程是我的信仰,<br>', 1200)
+                .addScene('做一款完整的从前端UI,数据交互到服务与数据的产品, 是我目前的追求<br><br>', 2000)
+                .addScene('最后, 很开心与大伙成为同事, 上班我们一起联调接口, 下班我们可以一起玩游戏<br><br>')
+                .addScene('谢谢大家! ')
+                .addScene(theater.stop)
+    }
 </script>
 </body>
 </html>
