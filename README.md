@@ -38,11 +38,7 @@
 * [Github丨Front-end-Web-Development-Interview-Question](https://github.com/paddingme/Front-end-Web-Development-Interview-Question)
 * [Github丨Awsome-Front-End-learning-resource](https://helloqingfeng.github.io/front-end-index/index.html)
 
-
-
-
 ## 简历部分
-
 
 ## 笔试部分
 
