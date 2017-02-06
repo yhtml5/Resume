@@ -1,0 +1,53 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/yhtml5/.nvm/versions/node/v6.9.3/bin/node',
+1 verbose cli   '/Users/yhtml5/.nvm/versions/node/v6.9.3/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'git' ]
+2 info using npm@3.10.10
+3 info using node@v6.9.3
+4 verbose run-script [ 'pregit', 'git', 'postgit' ]
+5 info lifecycle yhtml5-resume@1.0.0~pregit: yhtml5-resume@1.0.0
+6 verbose lifecycle yhtml5-resume@1.0.0~pregit: unsafe-perm in lifecycle true
+7 verbose lifecycle yhtml5-resume@1.0.0~pregit: PATH: /Users/yhtml5/.nvm/versions/node/v6.9.3/lib/node_modules/npm/bin/node-gyp-bin:/Users/yhtml5/projects/github/Resume/node_modules/.bin:/Users/yhtml5/.nvm/versions/node/v6.9.3/bin:/usr/local/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home::/platform-tools:/tools:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/bin
+8 verbose lifecycle yhtml5-resume@1.0.0~pregit: CWD: /Users/yhtml5/projects/github/Resume
+9 silly lifecycle yhtml5-resume@1.0.0~pregit: Args: [ '-c', 'clear && git status' ]
+10 silly lifecycle yhtml5-resume@1.0.0~pregit: Returned: code: 0  signal: null
+11 info lifecycle yhtml5-resume@1.0.0~git: yhtml5-resume@1.0.0
+12 verbose lifecycle yhtml5-resume@1.0.0~git: unsafe-perm in lifecycle true
+13 verbose lifecycle yhtml5-resume@1.0.0~git: PATH: /Users/yhtml5/.nvm/versions/node/v6.9.3/lib/node_modules/npm/bin/node-gyp-bin:/Users/yhtml5/projects/github/Resume/node_modules/.bin:/Users/yhtml5/.nvm/versions/node/v6.9.3/bin:/usr/local/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home::/platform-tools:/tools:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/bin
+14 verbose lifecycle yhtml5-resume@1.0.0~git: CWD: /Users/yhtml5/projects/github/Resume
+15 silly lifecycle yhtml5-resume@1.0.0~git: Args: [ '-c',
+15 silly lifecycle   'git checkout dev && git add -A && git commit -m \'auto commit\' && git merge master && git checkout master && git merge dev && git push -all && git checkout dev' ]
+16 silly lifecycle yhtml5-resume@1.0.0~git: Returned: code: 129  signal: null
+17 info lifecycle yhtml5-resume@1.0.0~git: Failed to exec git script
+18 verbose stack Error: yhtml5-resume@1.0.0 git: `git checkout dev && git add -A && git commit -m 'auto commit' && git merge master && git checkout master && git merge dev && git push -all && git checkout dev`
+18 verbose stack Exit status 129
+18 verbose stack     at EventEmitter.<anonymous> (/Users/yhtml5/.nvm/versions/node/v6.9.3/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
+18 verbose stack     at emitTwo (events.js:106:13)
+18 verbose stack     at EventEmitter.emit (events.js:191:7)
+18 verbose stack     at ChildProcess.<anonymous> (/Users/yhtml5/.nvm/versions/node/v6.9.3/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+18 verbose stack     at emitTwo (events.js:106:13)
+18 verbose stack     at ChildProcess.emit (events.js:191:7)
+18 verbose stack     at maybeClose (internal/child_process.js:877:16)
+18 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+19 verbose pkgid yhtml5-resume@1.0.0
+20 verbose cwd /Users/yhtml5/projects/github/Resume
+21 error Darwin 16.3.0
+22 error argv "/Users/yhtml5/.nvm/versions/node/v6.9.3/bin/node" "/Users/yhtml5/.nvm/versions/node/v6.9.3/bin/npm" "run" "git"
+23 error node v6.9.3
+24 error npm  v3.10.10
+25 error code ELIFECYCLE
+26 error yhtml5-resume@1.0.0 git: `git checkout dev && git add -A && git commit -m 'auto commit' && git merge master && git checkout master && git merge dev && git push -all && git checkout dev`
+26 error Exit status 129
+27 error Failed at the yhtml5-resume@1.0.0 git script 'git checkout dev && git add -A && git commit -m 'auto commit' && git merge master && git checkout master && git merge dev && git push -all && git checkout dev'.
+27 error Make sure you have the latest version of node.js and npm installed.
+27 error If you do, this is most likely a problem with the yhtml5-resume package,
+27 error not with npm itself.
+27 error Tell the author that this fails on your system:
+27 error     git checkout dev && git add -A && git commit -m 'auto commit' && git merge master && git checkout master && git merge dev && git push -all && git checkout dev
+27 error You can get information on how to open an issue for this project with:
+27 error     npm bugs yhtml5-resume
+27 error Or if that isn't available, you can get their info via:
+27 error     npm owner ls yhtml5-resume
+27 error There is likely additional logging output above.
+28 verbose exit [ 1, true ]
