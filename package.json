@@ -1,0 +1,22 @@
+{
+  "name": "yhtml5-resume",
+  "version": "1.0.0",
+  "description": "a resume, I'm looking for work now",
+  "main": "index.js",
+  "scripts": {
+    "pregit": "clear && git status",
+    "git": "git checkout dev && git add -A && git commit -m 'auto commit' && git merge master && git checkout master && git merge dev && git push -all && git checkout dev",
+    "postgit": "clear && git status",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yhtml5/Resume.git"
+  },
+  "author": "yhtml5 <1417376255@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yhtml5/Resume/issues"
+  },
+  "homepage": "https://github.com/yhtml5/Resume#readme"
+}
