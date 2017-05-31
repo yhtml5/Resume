@@ -118,7 +118,6 @@
 [前端面试-代码]:https://github.com/darcyclarke/Front-end-Developer-Interview-Questions#jscode
 [前端面试-fun]:https://github.com/darcyclarke/Front-end-Developer-Interview-Questions#fun
 
-
 [1.md]:https://github.com/paddingme/Front-end-Web-Development-Interview-Question/blob/master/前端试题/1.md
 [2.md]:https://github.com/paddingme/Front-end-Web-Development-Interview-Question/blob/master/前端试题/2.md
 [3.md]:https://github.com/paddingme/Front-end-Web-Development-Interview-Question/blob/master/前端试题/3.md
@@ -131,16 +130,9 @@
 [10.md]:https://github.com/paddingme/Front-end-Web-Development-Interview-Question/blob/master/前端试题/10.md
 [11.md]:https://github.com/paddingme/Front-end-Web-Development-Interview-Question/blob/master/前端试题/11.md
 
-
-
-
-
-
-
 [各大互联网公司2014前端笔试面试题丨javascript]:http://www.cnblogs.com/coco1s/p/4029708.html
 [各大互联网公司2014前端笔试面试题丨html/css]:http://www.cnblogs.com/coco1s/p/4034937.html
 
- 
 [author]:https://img.shields.io/badge/author-yhtml5-blue.svg
 [bower]: http://bower.io
 [Build Status]:https://img.shields.io/travis/twbs/bootstrap/master.svg
