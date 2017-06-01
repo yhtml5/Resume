@@ -1,7 +1,5 @@
 # 前端开发丨张大漾丨[Github][github]
 
-![author] ![npm version] ![node version] ![Build Status] ![downloads total] 
-
 - 26岁丨本科丨三年开发经验丨18758302302丨1417376255@qq.com
 - **期望工作地点**: 杭州市
 - **期望职业**: 前端工程师

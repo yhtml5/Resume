@@ -3,6 +3,7 @@ const chalk = require('chalk')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin')
 const { version, title } = require('./config')()
 
 module.exports = function (env) {
@@ -31,20 +32,21 @@ module.exports = function (env) {
           }]
         }, {
           test: /\.css$/,
-          //include: /wangeditor/,
-          use: [
-            'style-loader',
-            {
-              loader: 'css-loader',
-              options: {
-                modules: false,
-                minimize: env === 'production',
-                sourceMap: false,
-                plugins: function () {
-                  require('autoprefixer')({/* ...options */ })
+          use: ExtractTextPlugin.extract({
+            fallback: "style-loader",
+            use: [
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: false,
+                  minimize: env === 'production',
+                  sourceMap: false,
+                  plugins: function () {
+                    require('autoprefixer')({/* ...options */ })
+                  }
                 }
-              }
-            }]
+              }]
+          })
         }, {
           test: /\.(js|jsx)$/,
           include: [
@@ -103,6 +105,7 @@ module.exports = function (env) {
       ],
     },
     plugins: [
+      new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.css`),
       new webpack.DefinePlugin({
         'process.env': {
           'NODE_ENV': JSON.stringify(process.env.NODE_ENV === 'production' ? 'production' : 'development'),
@@ -116,11 +119,12 @@ module.exports = function (env) {
         // excludeChunks: [''],
         filename: 'index.html',
         template: path.resolve(__dirname, './template/template.js'),
+        inlineSource: '.(js|css)$', // embed all javascript and css inline
         chunksSortMode: 'dependency',
         title: title,
         hash: false,
         cache: true,
-        favicon: './app/static/yh.png',
+        favicon: './app/static/favicon.png',
         minify: (env === 'production') ?
           {
             collapseWhitespace: true,
@@ -131,6 +135,7 @@ module.exports = function (env) {
           }
           : () => null
       }),
+      new HtmlWebpackInlineSourcePlugin(),
     ]
   }
 }
