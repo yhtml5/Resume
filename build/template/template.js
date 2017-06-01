@@ -1,3 +1,5 @@
+const html = require('../../app/template.js')
+
 module.exports = function (templateParams) {
   return (
     `<!DOCTYPE html>
@@ -20,7 +22,7 @@ module.exports = function (templateParams) {
     <meta name="format-detection" content="telephone=no">
     </head>
     <body>
-    <div id="root" style="height:100%"></div>
+    ${html}
     <!--<div>development mode</div>-->
     </body>
     </html>`

@@ -32,7 +32,7 @@ a:hover {
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 }
 
-.btn + .btn {
+.btn+.btn {
     margin-left: 1rem;
 }
 
@@ -63,116 +63,9 @@ a:hover {
         padding: 0.75rem;
         font-size: 0.9rem;
     }
-
-    .btn + .btn {
+    .btn+.btn {
         margin-top: 1rem;
         margin-left: 0;
-    }
-}
-
-@keyframes bg-generator {
-    0% {
-        background-position: 0% 84%
-    }
-    50% {
-        background-position: 100% 17%
-    }
-    100% {
-        background-position: 0% 84%
-    }
-}
-
-@-webkit-keyframes bg-generator {
-    0% {
-        background-position: 0% 84%
-    }
-    50% {
-        background-position: 100% 17%
-    }
-    100% {
-        background-position: 0% 84%
-    }
-}
-
-.page-header {
-    color: #fff;
-    text-align: center;
-    background-size: 600% 600%;
-    animation: bg-generator 10s ease infinite;
-    -webkit-animation: bg-generator 50s ease infinite;
-    transition: -webkit-filter 0.2s ease, background-image 0.2s ease;
-    background-image: linear-gradient(223deg, #155799, #E48BA4, #00B4B4, #159957);
-    background-color: #1c81df;
-    position: relative;
-    z-index: 1;
-
-}
-.page-demo {
-    background-image: linear-gradient(120deg, #155799, #159957);
-}
-
-@media screen and (min-width: 64em) {
-    .page-header {
-        padding: 5rem 6rem;
-    }
-}
-
-@media screen and (min-width: 42em) and (max-width: 64em) {
-    .page-header {
-        padding: 3rem 4rem;
-    }
-}
-
-@media screen and (max-width: 42em) {
-    .page-header {
-        padding: 2rem 1rem;
-    }
-}
-
-.project-name {
-    margin-top: 0;
-    margin-bottom: 0.1rem;
-}
-
-@media screen and (min-width: 64em) {
-    .project-name {
-        font-size: 3.25rem;
-    }
-}
-
-@media screen and (min-width: 42em) and (max-width: 64em) {
-    .project-name {
-        font-size: 2.25rem;
-    }
-}
-
-@media screen and (max-width: 42em) {
-    .project-name {
-        font-size: 1.75rem;
-    }
-}
-
-.project-tagline {
-    margin-bottom: 2rem;
-    font-weight: normal;
-    opacity: 0.7;
-}
-
-@media screen and (min-width: 64em) {
-    .project-tagline {
-        font-size: 1.25rem;
-    }
-}
-
-@media screen and (min-width: 42em) and (max-width: 64em) {
-    .project-tagline {
-        font-size: 1.15rem;
-    }
-}
-
-@media screen and (max-width: 42em) {
-    .project-tagline {
-        font-size: 1rem;
     }
 }
 
@@ -184,7 +77,12 @@ a:hover {
     max-width: 100%;
 }
 
-.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6 {
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-weight: normal;
@@ -216,7 +114,7 @@ a:hover {
     border-radius: 0.3rem;
 }
 
-.main-content pre > code {
+.main-content pre>code {
     padding: 0;
     margin: 0;
     font-size: 0.9rem;
@@ -236,7 +134,8 @@ a:hover {
     word-break: normal;
 }
 
-.main-content .highlight pre, .main-content pre {
+.main-content .highlight pre,
+.main-content pre {
     padding: 0.8rem;
     overflow: auto;
     font-size: 0.9rem;
@@ -244,7 +143,8 @@ a:hover {
     border-radius: 0.3rem;
 }
 
-.main-content pre code, .main-content pre tt {
+.main-content pre code,
+.main-content pre tt {
     display: inline;
     max-width: initial;
     padding: 0;
@@ -256,11 +156,15 @@ a:hover {
     border: 0;
 }
 
-.main-content pre code:before, .main-content pre code:after, .main-content pre tt:before, .main-content pre tt:after {
+.main-content pre code:before,
+.main-content pre code:after,
+.main-content pre tt:before,
+.main-content pre tt:after {
     content: normal;
 }
 
-.main-content ul, .main-content ol {
+.main-content ul,
+.main-content ol {
     margin-top: 0;
 }
 
@@ -271,11 +175,11 @@ a:hover {
     border-left: 0.3rem solid #dce6f0;
 }
 
-.main-content blockquote > :first-child {
+.main-content blockquote> :first-child {
     margin-top: 0;
 }
 
-.main-content blockquote > :last-child {
+.main-content blockquote> :last-child {
     margin-bottom: 0;
 }
 
@@ -291,7 +195,8 @@ a:hover {
     font-weight: bold;
 }
 
-.main-content table th, .main-content table td {
+.main-content table th,
+.main-content table td {
     padding: 0.5rem 1rem;
     border: 1px solid #e9ebec;
 }
@@ -340,38 +245,5 @@ a:hover {
     .main-content {
         padding: 2rem 1rem;
         font-size: 1rem;
-    }
-}
-
-.site-footer {
-    padding-top: 2rem;
-    margin-top: 2rem;
-    border-top: solid 1px #eff0f1;
-}
-
-.site-footer-owner {
-    display: block;
-    font-weight: bold;
-}
-
-.site-footer-credits {
-    color: #819198;
-}
-
-@media screen and (min-width: 64em) {
-    .site-footer {
-        font-size: 1rem;
-    }
-}
-
-@media screen and (min-width: 42em) and (max-width: 64em) {
-    .site-footer {
-        font-size: 1rem;
-    }
-}
-
-@media screen and (max-width: 42em) {
-    .site-footer {
-        font-size: 0.9rem;
     }
 }

@@ -7,7 +7,7 @@ function config() {
     hostname,
     port,
     version,
-    title: '后台管理系统',
+    title: '前端开发丨张大漾',
     origin: 'http://' + hostname + ':' + port,
     domain: '',
     pages: [{

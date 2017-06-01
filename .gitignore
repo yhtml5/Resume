@@ -1,11 +1,13 @@
 # custom
 logs/*
-/node_modules/
-*/bower_components/
+/**/node_modules/
+/**/bower_components/
+npm-debug.log
 
 tmp
 .DS_Store
 .idea
+.vscode
 *.swp
 .test.html.swp
 .test.html.swo
@@ -58,4 +60,3 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-/npm-debug.log

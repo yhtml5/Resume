@@ -8,42 +8,20 @@ const { version, title } = require('./config')()
 module.exports = function (env) {
   console.log('\n  The process.env.NODE_ENV is: ', chalk.cyan.bold(process.env.NODE_ENV, env), '\n')
 
-  const extractPcss = new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.pcss.css`)
-  const extractAntd = new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.antd.css`)
-
   return {
     // context: path.resolve(__dirname, "./app"),
     entry: {
-      author: './build/template/author.js',
-      index: (process.env.NODE_ENV === 'development')
-        ? ['react-hot-loader/patch', 'webpack-hot-middleware/client', './app/index.jsx']
-        : ['./app/index.jsx'],
-      vendorReact: ['react', 'react-dom', 'redux-thunk', 'react-router-redux', 'react-router-dom', 'react-redux'],
-      // ajax: './app/util/ajax.js'
+      index: './app/index.js',
     },
     output: {
       filename: 'static/[name].js',
       chunkFilename: `static/[name]-[id]${(env === 'production') ? '.[chunkhash:6]' : ''}.js`,
       path: path.resolve(__dirname, `../dist/${process.env.NODE_ENV === 'production' ? version : ''}`),
     },
-    resolve: {
-      // extensions: [".jsx", ".js"],
-      alias: {
-        // '~': path.resolve(__dirname, '../app'),
-        // jquery: "jquery/dist/jquery" + isMin() + ".js",
-        // react: "./node_modules/react/dist/react" + isMin() + ".js",
-        // "react-dom": "./node_modules/react-dom/dist/react-dom" + isMin() + ".js",
-        // "react-redux": "./node_modules/react-redux/dist/react-redux" + isMin() + ".js",
-        // "react-router": "./node_modules/react-router/umd/ReactRouter" + isMin() + ".js",
-        // "react-router-redux": "./node_modules/react-router-redux/dist/ReactRouterRedux" + isMin() + ".js",
-        // redux: "./node_modules/redux/dist/redux" + isMin() + ".js",
-        // reqwest: "./node_modules/reqwest/reqwest" + (process.env.NODE_ENV === 'production') ? '.min' : '' + ".js",
-      }
-    },
     module: {
       rules: [
         {
-          test: /\.yhtml$/,
+          test: /\.(yhtml|html)$/,
           use: [{
             loader: 'html-loader',
             // options: {
@@ -52,62 +30,21 @@ module.exports = function (env) {
             // }
           }]
         }, {
-          test: /\.pcss$/,
-          exclude: /node_modules/,
-          use: extractPcss.extract({
-            fallback: 'style-loader',
-            use: [{
+          test: /\.css$/,
+          //include: /wangeditor/,
+          use: [
+            'style-loader',
+            {
               loader: 'css-loader',
               options: {
-                modules: true,
+                modules: false,
                 minimize: env === 'production',
-                localIdentName: (env === 'production') ? '[local]-[hash:base64:6]' : '[path][name]-[local]',
-                camelCase: true,
                 sourceMap: false,
-                // importLoaders: 1,
-              }
-            }, {
-              loader: 'postcss-loader',
-              options: {
                 plugins: function () {
-                  return [
-                    require('postcss-smart-import')({/* ...options */ }),
-                    require('precss')({/* ...options */ }),
-                    require('autoprefixer')({/* ...options */ })
-                  ]
+                  require('autoprefixer')({/* ...options */ })
                 }
               }
             }]
-          })
-        },
-        {
-          test: /\.css$/,
-          //include: /wangeditor/,
-          exclude: /antd/,
-          use: extractPcss.extract({
-            fallback: 'style-loader',
-            use: [{
-              loader: 'css-loader',
-              options: {
-                minimize: env === 'production',
-                sourceMap: false,
-              }
-            }]
-          })
-        },
-        {
-          test: /\.css$/,
-          include: /antd/, //[path.resolve(__dirname, "../node_modules/antd")],
-          use: [{
-            loader: 'style-loader',
-          }, {
-            loader: 'css-loader',
-            options: {
-              modules: false,
-              minimize: env === 'production',
-              sourceMap: false,
-            }
-          }]
         }, {
           test: /\.(js|jsx)$/,
           include: [
@@ -131,10 +68,6 @@ module.exports = function (env) {
               ],
               plugins: [
                 'transform-runtime',
-                ["import", {
-                  "libraryName": "antd",
-                  "style": "css" //`style: true` 会加载 less 文件
-                }]
               ]
             }
           }
@@ -155,8 +88,7 @@ module.exports = function (env) {
           use: [
             {
               loader: "html-loader"
-            },
-            {
+            }, {
               loader: "markdown-loader",
               options: {
                 // highlight: function (code) {
@@ -171,8 +103,6 @@ module.exports = function (env) {
       ],
     },
     plugins: [
-      extractPcss,
-      extractAntd,
       new webpack.DefinePlugin({
         'process.env': {
           'NODE_ENV': JSON.stringify(process.env.NODE_ENV === 'production' ? 'production' : 'development'),
@@ -182,7 +112,7 @@ module.exports = function (env) {
         'DEBUG': process.env.NODE_ENV !== 'production'
       }),
       new HtmlWebpackPlugin({
-        chunks: ['author', 'index', 'vendorReact', 'manifest'],
+        chunks: ['index'],
         // excludeChunks: [''],
         filename: 'index.html',
         template: path.resolve(__dirname, './template/template.js'),
@@ -190,7 +120,7 @@ module.exports = function (env) {
         title: title,
         hash: false,
         cache: true,
-        favicon: './app/static/favicon.ico',
+        favicon: './app/static/yh.png',
         minify: (env === 'production') ?
           {
             collapseWhitespace: true,
@@ -201,30 +131,6 @@ module.exports = function (env) {
           }
           : () => null
       }),
-      new webpack.optimize.CommonsChunkPlugin({
-        children: true,
-        async: true,
-        minChunks: 2,
-      }),
-      new webpack.optimize.CommonsChunkPlugin({
-        names: ["vendorReact", ["index", "vendorReact"]],
-        // children: true,
-        // async: true,
-        // chunks: ['vendorReact'],
-        // filename: "vendor.js",
-      }),
-      new webpack.optimize.CommonsChunkPlugin({
-        name: 'manifest'
-      })
-      // new webpack.optimize.CommonsChunkPlugin({
-      //   name: 'vendor',
-      //   // names: ["vendor", 'react'],
-      //   // chunks: ["index", "react"],
-      //   // filename: "vendor.js",
-      //   minChunks: function (module) {
-      //     return module.context && module.context.indexOf('node_modules') !== -1;
-      //   },
-      // }),
     ]
   }
 }

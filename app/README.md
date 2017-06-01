@@ -160,7 +160,7 @@ Github绝对是前端最好的大课堂. 几乎所有的前端框架,类库,项�
 [Build Status]:https://img.shields.io/travis/twbs/bootstrap/master.svg
 [downloads total]:https://img.shields.io/github/downloads/atom/atom/total.svg
 [npm version]:https://img.shields.io/npm/v/npm.svg
-[node version]:https://img.shields.io/badge/node-v4.3.2-blue.svg
+[node version]:https://img.shields.io/badge/node-v7.10.0-blue.svg
 
 [es5-shim]:https://github.com/es-shims/es5-shim
 [github]:https://github.com/yhtml5
