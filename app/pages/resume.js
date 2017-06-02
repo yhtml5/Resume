@@ -9,8 +9,9 @@ function html() {
     <div id='body' class="main-content">
     ${markdown}
     ${footer}
+    </div>
     `
   )
 }
 
-module.exports = html
+module.exports = html()

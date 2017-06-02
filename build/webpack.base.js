@@ -9,6 +9,23 @@ const { version, title } = require('./config')()
 module.exports = function (env) {
   console.log('\n  The process.env.NODE_ENV is: ', chalk.cyan.bold(process.env.NODE_ENV, env), '\n')
 
+  const HtmlWebpackPluginParams = {
+    template: path.resolve(__dirname, './template/template.js'),
+    chunksSortMode: 'dependency',
+    hash: false,
+    cache: true,
+    favicon: './app/static/favicon.png',
+    minify: (env === 'production') ?
+      {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        trimCustomFragments: true
+      }
+      : () => null
+  }
+
   return {
     // context: path.resolve(__dirname, "./app"),
     entry: {
@@ -144,27 +161,16 @@ module.exports = function (env) {
         },
         'DEBUG': process.env.NODE_ENV !== 'production'
       }),
-      new HtmlWebpackPlugin({
-        chunks: ['index'],
-        // excludeChunks: [''],
-        filename: 'index.html',
-        template: path.resolve(__dirname, './template/template.js'),
-        inlineSource: '.(js|css)$', // embed all javascript and css inline
-        chunksSortMode: 'dependency',
-        title: title,
-        hash: false,
-        cache: true,
-        favicon: './app/static/favicon.png',
-        minify: (env === 'production') ?
-          {
-            collapseWhitespace: true,
-            removeComments: true,
-            removeScriptTypeAttributes: true,
-            removeStyleLinkTypeAttributes: true,
-            trimCustomFragments: true
-          }
-          : () => null
-      }),
+      new HtmlWebpackPlugin(
+        Object.assign({}, HtmlWebpackPluginParams, {
+          type: 'index',
+          chunks: ['index'],
+          // excludeChunks: [''],
+          filename: 'index.html',
+          inlineSource: '.(js|css)$', // embed all javascript and css inline
+          title: '前端开发丨张大漾',
+        })
+      ),
       new HtmlWebpackInlineSourcePlugin(),
     ]
   }

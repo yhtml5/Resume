@@ -7,7 +7,7 @@ function config() {
     hostname,
     port,
     version,
-    title: '前端开发丨张大漾',
+    title: 'yhtml5',
     origin: 'http://' + hostname + ':' + port,
     domain: '',
     pages: [{

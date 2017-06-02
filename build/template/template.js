@@ -1,6 +1,6 @@
-const html = require('../../app/template.js')
-
 module.exports = function (templateParams) {
+  const html = require('../../app/template.js')(templateParams.htmlWebpackPlugin.options.type)
+
   return (
     `<!DOCTYPE html>
     <html>
