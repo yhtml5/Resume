@@ -324,7 +324,9 @@ Access-Control-Expose-Headers: FooBar
 - [ ] 提示用户更换浏览器  (天猫 >ie7)
 - [ ] 开启服务端渲染, react/vue/模板嵌套
 
-### js的闭包/原形链/作用域
+### js的闭包/原型链/作用域
+
+
 
 ### js的设计模式
 ### 页面间通讯
