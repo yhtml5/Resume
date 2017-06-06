@@ -966,10 +966,13 @@ test();
 ```
 
 ### this
+函数体内: this指代全局对象(window/undefind)
+函数体外: 指的是函数执行的上下文,取决于函数是如何调用的
 
+
+### [用js实现基本算法][sorts]
 ### js基础问题
 ### react 源码解析
-### 用js实现基本算法
 ### for 循环原理
 
 
@@ -985,5 +988,6 @@ test();
 [closures]:https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures
 [prototype]:https://www.zhihu.com/question/34183746
 [design-patterns]:http://www.cnblogs.com/Darren_code/archive/2011/08/31/JavascripDesignPatterns.html#!comments
+[sorts]:https://github.com/damonare/Sorts
 
 
