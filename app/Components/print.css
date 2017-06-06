@@ -3,3 +3,7 @@
         display: none
     }
 }
+
+@page {
+    size: A4 portrait;
+}
