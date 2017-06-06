@@ -13,7 +13,7 @@
 ### 我的优势
 1. 能根据项目特点, 产品需求进行前端技术选型, 能独立完成一套前端项目. 包括项目前端架构, 页面UI组件开发, 前后端数据联调.  
 2. 有自己一套前端开发工作流[YHTML5-Seed][YHTML5-Seed]; 基于NodeJs + webpack2 + postcss + eslint + express的一套前端脚手架, 进行快速开发单页面, 多页面应用.
-3. 有nodejs 开发经验, 开发过[YHTML5-CLI][YHTML5-CLI], 用于快速生成前端项目, 提供基本的项目骨骼, 之后只需要专注于业务需求
+3. 有nodejs 开发经验, 开发过[YHTML5-CLI][YHTML5-CLI], 用于快速生成前端项目, 提供基本的项目骨架, 之后只需要专注于业务需求
 4. 对前端技术非常执着; 会合理使用前沿的前端技术, 使团队开发更加具有效率, 极致优化产品性能. 同时提高产品的体验感, 维护性, 稳定性,
 5. 思维清晰, 自学能力强, 能随时关注相关技术趋势, 不断完善自身技术水平. 您可以访问[YHTML5-Tutorial][YHTML5-Tutorial], 关注我最新学习状况. 
 
@@ -35,7 +35,8 @@
 * 熟练html/css/js, 使用Webstorm/vscode编写可复用, 可维护的前端代码
 * 熟练使用ES6, 面向未来编程, 使用 babel 转码
 * 熟练使用React/Vue/AngularJs/Jquery 等主流前端框架, 并根据不同的项目进行技术选型, 快速开发高性能/可复用的前端项目
-* 熟练使用animate.css, Echarts, vivus, bootstrap等类库, 增加动画效果, 提高交互性
+* 熟练使用animate.css, vivus, bootstrap等类库, 增加动画效果, 提高交互性
+* 熟练使用echarts等类库, 处理数据可视化 [demo3地址]
 * 熟练使用[html5shiv][html5shiv],[es5-shim][es5-shim],normalize,autoprefixer 解决**浏览器兼容性**问题
 * 熟练http协议, 能用不同方式处理同源策略, 解决跨域请求等方式
 * 熟练使用ajax, 发起请求, 联调接口, 处理异步逻辑
@@ -149,7 +150,13 @@ Github绝对是前端最好的大课堂. 几乎所有的前端框架,类库,项�
   
 - 2010.9-2014.6丨浙江万里学院丨通信工程丨本科  
 
- 
+<!--
+## 作品集
+* [YHTML5-Seed][YHTML5-Seed], 项目脚手架,提供react/mpa/vue等项目模板
+* [YHTML5-CLI][YHTML5-CLI], 命令行工具,用于快速生成新项目
+* [YHTML5-Share][YHTML5-Share], 前端技术总结与分享
+-->
+
 [author]:https://img.shields.io/badge/author-yhtml5-blue.svg
 [Build Status]:https://img.shields.io/travis/twbs/bootstrap/master.svg
 [downloads total]:https://img.shields.io/github/downloads/atom/atom/total.svg
@@ -164,6 +171,7 @@ Github绝对是前端最好的大课堂. 几乎所有的前端框架,类库,项�
 [YHTML5-Seed]:http://yhtml5.com/YHTML5-Seed/
 [YHTML5-Tutorial]:https://github.com/yhtml5/YHTML5-Tutorial
 [YHTML5-CLI]:http://yhtml5.com/YHTML5-CLI/
+[YHTML5-Share]:https://github.com/yhtml5/YHTML5-Work/tree/master/work-summary/20160714-share-front-end
 
 [project-jubaopay]:https://www.jubaopay.com
 [project-home-decoration]:houtai.ejz99.com
