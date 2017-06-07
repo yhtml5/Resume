@@ -11,7 +11,8 @@
     "yhtml5"
   ],
   "dependencies": {
-    "normalize.css": "^7.0.0"
+    "normalize.css": "^7.0.0",
+    "reqwest": "^2.0.5"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
