@@ -1170,7 +1170,7 @@ xmlhttprequest
 ### [restful api][restful-api]
 
 
-### js事件
+### [DOM事件][dom-event-architecture]
 
 * HTML 事件可以是浏览器行为，也可以是用户行为
 * DOM2.0模型将事件处理流程分为三个阶段：一、事件捕获阶段，二、事件目标阶段，三、事件冒泡阶段
@@ -1225,6 +1225,20 @@ document.getElementById("parent-list").addEventListener("click",function(e) {
   }
 });
 ```
+#### 优缺点
+* 减少事件注册，节省内存。在table上代理所有td的click事件
+* 简化了dom节点更新时，相应事件的更新。不用在新添加/删除的li上绑定click事件。
+* 事件委托基于冒泡，对于不冒泡的事件不支持。
+* 层级过多，冒泡过程中，可能会被某层阻止掉。
+* 理论上委托会导致浏览器频繁调用处理函数，虽然很可能不需要处理。所以建议就近委托，比如在table上代理td，而不是在document上代理td。
+* 把所有事件都用代理就可能会出现事件误判。比如，在document中代理了所有button的click事件，另外的人在引用改js时，可能不知道，造成单击button触发了两个click事件。
+
+不冒泡的事件:
+例如load、unload、blur、focus、mouseleave......
+详细内容见[W3C文档][w3c-event-type]：文档中事件的Bubbles属性为NO的不支持冒泡
+* 链接上的focus或blur事件仅发生于链接自身上，而它的任何父节点上的事件都不会产生，所有不会冒泡。
+
+
 
 ### js 数组对象
 
@@ -1363,4 +1377,5 @@ function removeDuplicatedItem4(ar) {
 [flexbox]:https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 [flexbox-ruan]:http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
 [restful-api]:http://www.ruanyifeng.com/blog/2014/05/restful_api.html
-
+[dom-event-architecture]:https://www.w3.org/TR/DOM-Level-3-Events/#dom-event-architecture
+[w3c-event-type]:https://www.w3.org/TR/DOM-Level-3-Events/#event-type-blur
