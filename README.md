@@ -1,4 +1,4 @@
-# 前端开发丨张大漾丨[Github]丨[我的简历]
+# 前端开发丨张大漾丨[Github]丨[我的简历][resume]
 
 ![author] ![npm version] ![node version] ![Build Status] ![downloads total] 
 
@@ -102,9 +102,7 @@
 
 
 
-[我的简历]:http://yhtml5.com/Resume
 [面试要素]:https://github.com/yhtml5/Resume/blob/gh-pages/interview/README.md
-
 
 [Front End Web Development Quiz]:http://davidshariff.com/quiz
 [FEX面试题]:https://github.com/fex-team/interview-questions
@@ -146,6 +144,7 @@
 [yhtml5.com]:http://yhtml5.com
 [YHTML5-Seed]:http://yhtml5.com/YHTML5-Seed/
 [YHTML5-Tutorial]:https://github.com/yhtml5/YHTML5-Tutorial
+[resume]:http://resume.yhtml5.com
 [技术综合型网站]:http://yhtml5.com
 [前端开发工作流]:http://yhtml5.com/YHTML5-Seed/
 [洋葱官网]:http://yhtml5.com
