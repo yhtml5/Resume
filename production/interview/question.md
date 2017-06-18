@@ -1,6 +1,32 @@
 ## interview question
 
-### 从输入url到输出页面, 经历了哪些过程
+### Questions
+
+* html/css/js
+  * [DOM事件](#dom事件)
+  * [css布局](#css布局)
+  * [css盒子模型](#盒子模型)
+  * [Object and Array](#object-and-array)
+  * [声明提前](#声明提前)
+  * [this](#this)
+  * [闭包与作用域](#闭包与作用域)
+  * [原型与原型链](#原型与原型链)
+* http   
+  * [AJAX](#ajax)
+  * [get与post区别](#get与post区别)
+  * [跨域问题及其解决方式](#跨域问题及其解决方式)
+  * [页面间通信](#页面间通信)
+* [从输入url到输出页面经历了哪些过程](#从输入url到输出页面经历了哪些过程)
+* [浏览器如何工作](#浏览器如何工作)
+* [前端性能优化相关问题](#前端性能优化相关问题)
+* [浏览器兼容性等问题](#浏览器兼容性等问题)
+* [js的设计模式](#js的设计模式)
+* [数据可视化](#数据可视化)
+* [前端安全](#前端安全)
+* [移动端和pc端有什么区别](#移动端和pc端有什么区别)
+* [react源码解析](#react源码解析)
+
+### 从输入url到输出页面经历了哪些过程
 
 **[从输入 URL 到页面加载完成的过程中都发生了什么事情][ulr-happen]**
 
@@ -386,7 +412,7 @@ Access-Control-Expose-Headers: FooBar
 
 兼容措施只是辅助手段, 一切以产品功能开发, 正常上线优先
 
-### 闭包/作用域
+### 闭包与作用域
 
 #### 作用域
 
@@ -656,7 +682,7 @@ for(let i=0; i<=5; i++){
 ```
 
 
-### 原型 prototype 
+### 原型与原型链
 
 * 每个函数都有一个属性叫做原型，这个属性指向一个对象
 * 原型只是函数的一个属性
@@ -665,7 +691,7 @@ for(let i=0; i<=5; i++){
 
 每次你定义一个函数的时候，这个函数的原型属性也就被定义出来了，也就可以使用了，如果不对它进行显示赋值的话，那么它的初始值就是一个空的对象Object。
 
-### 继承和原型链
+#### 继承和原型链
 
 JavaScript 是动态的，并且本身不提供类实现.(在ES2015/ES6中引入了class关键字，但是只是语法糖，JavaScript 仍然是基于原型的)。
 当谈到继承时，Javascript 只有一种结构：对象。
@@ -719,7 +745,7 @@ console.log(o.d); // undefined
 
 创建一个对象它自己的属性的方法就是设置这个对象的属性。唯一例外的获取和设置的行为规则就是当有一个 getter或者一个setter 被设置成继承的属性的时候。
 
-### 继承方法
+#### 继承方法
 
 JavaScript 并没有其他基于类的语言所定义的“方法”。
 在 JavaScript 里，任何函数都可以添加到对象上作为对象的属性。
@@ -748,7 +774,7 @@ console.log(p.m()); // 13
 // 此时的'this.a' 即 p.a，即 p 的自身属性 'a'
 ```
 
-### 使用不同的方法来创建对象和生成原型链
+#### 使用不同的方法来创建对象和生成原型链
 #### 使用普通语法创建对象
 ```
 var o = {a: 1};
@@ -870,7 +896,9 @@ var square = new Square(2);
 在用原型继承编写复杂代码前理解原型继承模型十分重要。同时，还要清楚代码中原型链的长度，并在必要时结束原型链，以避免可能存在的性能问题。
 此外，除非为了兼容新 JavaScript 特性，否则，永远不要扩展原生的对象原型。
 
-### get/post区别
+### [restful api][restful-api]
+
+### get与post区别
 
 http 协议中, 这俩种请求方式没有本质上的区别
 
@@ -1167,9 +1195,6 @@ xmlhttprequest
 * OAuth 2.0 授权
 * token 随机, 每一次的请求携带下一次请求的token
 
-### [restful api][restful-api]
-
-
 ### [DOM事件][dom-event-architecture]
 
 * HTML 事件可以是浏览器行为，也可以是用户行为
@@ -1240,7 +1265,7 @@ document.getElementById("parent-list").addEventListener("click",function(e) {
 
 
 
-### js 数组对象
+### Object and Array
 
 #### 数组去重
 ```
@@ -1334,7 +1359,7 @@ function removeDuplicatedItem4(ar) {
 }
 ```
 
-### react 源码解析
+### react源码解析
 
 #### 项目架构
 从目录结构看出, 它是一个典型的大厂项目
@@ -1358,7 +1383,7 @@ function removeDuplicatedItem4(ar) {
 
 ### 盒子模型
 
-
+### 移动端和pc端有什么区别
 
 [ulr-happen]:http://fex.baidu.com/blog/2014/05/what-happen/
 [how-browsers-work]:https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/
