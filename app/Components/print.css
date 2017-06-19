@@ -2,6 +2,12 @@
     .page-header {
         display: none
     }
+    h2 {
+        margin-top: 1rem
+    }
+    .main-content {
+        font-size: 0.9rem;
+    }
 }
 
 @page {
