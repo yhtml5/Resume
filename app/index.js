@@ -5,16 +5,15 @@ import './Components/Header.css'
 import './Components/Footer.css'
 import { yhtml5 } from '../build/template/author'
 
-yhtml5()
-
-  (function () {
+function setTarget() {
     var as = document.getElementsByTagName('a')
-    for (i = 0; i < as.length; i++)
+    for (var i = 0; i < as.length; i++)
       as[i].setAttribute('target','blank')
-  })()
+}
 
-
-
+yhtml5()
+setTarget()
+ 
 // if (process.env.NODE_ENV === 'production') {
 //   setInterval(author.yhtml5(), 3000)
 // }
