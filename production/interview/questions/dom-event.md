@@ -65,4 +65,3 @@ document.getElementById("parent-list").addEventListener("click",function(e) {
 例如load、unload、blur、focus、mouseleave......
 详细内容见[W3C文档][w3c-event-type]：文档中事件的Bubbles属性为NO的不支持冒泡
 * 链接上的focus或blur事件仅发生于链接自身上，而它的任何父节点上的事件都不会产生，所有不会冒泡。
-
