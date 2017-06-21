@@ -1,9 +1,12 @@
 @media print {
-    .page-header {
+    hr {
         display: none
     }
     h2 {
         margin-top: 1rem
+    }
+    .page-header {
+        display: none
     }
     .main-content {
         font-size: 0.9rem;
