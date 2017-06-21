@@ -247,3 +247,5 @@ app.listen(80);
 
 在有自己服务器做中间层情况下使用反向代理/CORS(跨域资源共享)
 在无权改变目标服务器, 又没有自己服务器做中间层, 使用jsonp/网络代理等方式
+
+[cross-domain]:https://segmentfault.com/a/1190000009624849?utm_source=75teamweekly&utm_medium=referral
