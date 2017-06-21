@@ -14,3 +14,4 @@ http 协议中, 这俩种请求方式没有本质上的区别
 
 resetful api 规定 get 用于请求资源, post用于发送数据
 
+### https 的原理
