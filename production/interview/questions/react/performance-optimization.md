@@ -98,7 +98,9 @@ React.createClass({
 });
 内部组件第一次渲染的时候，它会获取 { foo: 'bar' } 作为 value 的值。如果用户点击了 a 标签，父组件的 state 会更新成 { value: { foo: 'barbar' } }，触发内部组件的重新渲染过程，内部组件会收到 { foo: 'barbar' } 作为 value 的新的值。
 
-这里的问题是因为父组件和内部组件共享同一个对象的引用，当对象在 onClick 函数的第二行发生改变的时候，内部组件的属性也发生了改变，所以当重新渲染过程开始，shouldComponentUpdate 被调用的时候，this.props.value.foo 和 nextProps.value.foo 是相等的，因为实际上 this.props.value 和 nextProps.value 是同一个对象的引用。
+**这里的问题是因为父组件和内部组件共享同一个对象的引用，当对象在 onClick 函数的第二行发生改变的时候，内部组件的属性也发生了改变**
+
+所以当重新渲染过程开始，shouldComponentUpdate 被调用的时候，this.props.value.foo 和 nextProps.value.foo 是相等的，因为实际上 this.props.value 和 nextProps.value 是同一个对象的引用。
 
 因此，我们会丢失 prop 的改变，缩短重新渲染过程，UI 也不会从 'bar' 更新到 'barbar'
 
