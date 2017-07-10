@@ -171,6 +171,16 @@ module.exports = function (env) {
           title: '前端开发丨张大漾',
         })
       ),
+      new HtmlWebpackPlugin(
+        Object.assign({}, HtmlWebpackPluginParams, {
+          type: 'luyan',
+          chunks: ['index'],
+          // excludeChunks: [''],
+          filename: 'luyan.html',
+          inlineSource: '.(js|css)$', // embed all javascript and css inline
+          title: '网页设计丨卢燕',
+        })
+      ),
       new HtmlWebpackInlineSourcePlugin(),
     ]
   }
