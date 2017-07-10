@@ -1,5 +1,16 @@
 module.exports = function (templateParams) {
-  const html = require('../../app/template.js')(templateParams.htmlWebpackPlugin.options.type)
+  const resume = (type) => {
+    switch (type) {
+      case 'index':
+        return require('../../app/pages/resume.js')
+      case 'luyan':
+        return require('../../app/pages/luyan.js')
+      default:
+        console.error('\ndo not match any type, please checkout HtmlWebpackPlugin')
+        break;
+    }
+  }
+  const html = resume(templateParams.htmlWebpackPlugin.options.type)
 
   return (
     `<!DOCTYPE html>
