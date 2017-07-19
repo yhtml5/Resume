@@ -1,4 +1,7 @@
 @media print {
+    body {
+        padding-left: 2rem
+    }
     hr {
         display: none
     }
