@@ -9,6 +9,9 @@ const { version, title } = require('./config')()
 module.exports = function (env) {
   console.log('\n  The process.env.NODE_ENV is: ', chalk.cyan.bold(process.env.NODE_ENV, env), '\n')
 
+  const ExtractTextPluginInternal = new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.internal.css`)
+  const ExtractTextPluginExternal = new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.css`)
+
   const HtmlWebpackPluginParams = {
     template: path.resolve(__dirname, './template/template.js'),
     chunksSortMode: 'dependency',
@@ -49,7 +52,25 @@ module.exports = function (env) {
           }]
         }, {
           test: /\.css$/,
-          use: ExtractTextPlugin.extract({
+          exclude: /\.internal.css$/,
+          use: ExtractTextPluginExternal.extract({
+            fallback: "style-loader",
+            use: [
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: false,
+                  minimize: env === 'production',
+                  sourceMap: false,
+                  plugins: function () {
+                    require('autoprefixer')({/* ...options */ })
+                  }
+                }
+              }]
+          })
+        }, {
+          test: /\.internal.css$/,
+          use: ExtractTextPluginInternal.extract({
             fallback: "style-loader",
             use: [
               {
@@ -152,7 +173,8 @@ module.exports = function (env) {
       ],
     },
     plugins: [
-      new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.css`),
+      ExtractTextPluginInternal,
+      ExtractTextPluginExternal,
       new webpack.DefinePlugin({
         'process.env': {
           'NODE_ENV': JSON.stringify(process.env.NODE_ENV === 'production' ? 'production' : 'development'),
@@ -167,7 +189,7 @@ module.exports = function (env) {
           chunks: ['index'],
           // excludeChunks: [''],
           filename: 'index.html',
-          inlineSource: '.(js|css)$', // embed all javascript and css inline
+          inlineSource: '\.internal.css$', // embed all javascript and css inline
           title: '前端开发丨张大漾',
         })
       ),
@@ -177,7 +199,7 @@ module.exports = function (env) {
           chunks: ['index'],
           // excludeChunks: [''],
           filename: 'luyan.html',
-          inlineSource: '.(js|css)$', // embed all javascript and css inline
+          // inlineSource: '.(js|css)$', // embed all javascript and css inline
           title: '网页设计丨卢燕',
         })
       ),
