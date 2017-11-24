@@ -10,6 +10,10 @@ function setTarget() {
     as[i].setAttribute('target', 'blank')
 }
 
+const processEnv = JSON.stringify(process.env)
+
+document.write(processEnv)
+
 setTarget()
 
 // if (process.env.NODE_ENV === 'production') {
