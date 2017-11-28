@@ -10,11 +10,9 @@ function setTarget() {
     as[i].setAttribute('target', 'blank')
 }
 
-const processEnv = JSON.stringify(process.env)
-
-document.write(processEnv)
-
 setTarget()
+
+window.appEnv = process.env
 
 // if (process.env.NODE_ENV === 'production') {
 //   setInterval(author.yhtml5(), 3000)

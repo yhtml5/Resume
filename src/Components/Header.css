@@ -91,15 +91,3 @@
         background-position: 0% 84%
     }
 }
-
-@-webkit-keyframes bg-generator {
-    0% {
-        background-position: 0% 84%
-    }
-    50% {
-        background-position: 100% 17%
-    }
-    100% {
-        background-position: 0% 84%
-    }
-}
