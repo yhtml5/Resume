@@ -33,23 +33,20 @@ const config = {
   isAnalyze: true,
   analyzerPort: 9992,
   envVar: envVar,
-  outputPath: 'dist',
+  outputPath: outputPath,
   // host: './',
-
   entry: 'src/index.js',
-  distributePort: 9993,
+  type: 'MPA',
   pages: [{
-    title: '测试1',
-    key: 'index',
-    filename: 'index.html',
-    path: 'src/pages/resume.js'
+    title: '前端开发丨张大漾',
+    entry: 'src/index.js',
+    template: 'src/pages/index.js'
   }, {
-    key: 'luyan',
-    title: '测试2',
-    filename: 'luyan.html',
-    path: 'src/pages/luyan.js'
+    title: '网页设计丨卢燕',
+    entry: 'src/luyan.js',
+    template: 'src/pages/luyan.js'
   }],
-  type: '',
+  distributePort: 9993,
   test: {
     // testMatch: ['demo/__test__/**/*.js?(x)'],
     // transformIgnorePatterns: ["node_modules/(?!(yhtml5-test|react-redux|react-native-button)/)"],

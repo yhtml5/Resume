@@ -1,7 +1,6 @@
 import 'github-markdown-css'
 import './Components/index.css'
 import './Components/print.internal.css'
-import './Components/Header.css'
 import './Components/Footer.css'
 
 function setTarget() {
@@ -14,4 +13,4 @@ setTarget()
 
 window.appEnv = process.env
 
-console.warn('index')
+console.warn('luyan')
