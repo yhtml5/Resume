@@ -14,4 +14,4 @@ setTarget()
 
 window.appEnv = process.env
 
-console.warn('index')
+console.warn('index3')

@@ -46,7 +46,7 @@ const config = {
     entry: 'src/luyan.js',
     template: 'src/pages/luyan.js'
   }],
-  distributePort: 9993,
+  // distributePort: 9993,
   test: {
     // testMatch: ['demo/__test__/**/*.js?(x)'],
     // transformIgnorePatterns: ["node_modules/(?!(yhtml5-test|react-redux|react-native-button)/)"],

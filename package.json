@@ -1,6 +1,6 @@
 {
   "name": "resume",
-  "version": "1.3.0",
+  "version": "1.5.1",
   "author": "yhtml5 <1417376255@qq.com>",
   "main": "app/",
   "license": "MIT",
@@ -25,15 +25,14 @@
     "yhtml5-scripts": "0.0.10"
   },
   "engines": {
-    "node": ">= 5.0.0",
     "npm": ">= 3.0.0"
   },
   "scripts": {
-    "dev": "clear && node ./build/dev.server.js",
-    "dev:debug": "clear && webpack-dashboard -- node ./build/dev.server.js",
+    "start": "yhtml5-scripts start",
+    "dev": "yhtml5-scripts start",
     "build": "clear && yhtml5-scripts build",
-    "build:debug": "clear && webpack-dashboard -- yhtml5-scripts build",
-    "build:test": "yhtml5-script build",
+    "build:pre": "clear && yhtml5-scripts build pre",
+    "update": "npm i yhtml5-dev-utils@latest -P",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext .js,.jsx ./app/Containers",
     "precommit": "npm run test",
