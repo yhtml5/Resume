@@ -1,6 +1,6 @@
 {
   "name": "resume",
-  "version": "1.5.1",
+  "version": "1.11.1",
   "author": "yhtml5 <1417376255@qq.com>",
   "main": "app/",
   "license": "MIT",
@@ -11,28 +11,23 @@
     "yhtml5"
   ],
   "dependencies": {
-    "normalize.css": "^7.0.0",
-    "reqwest": "^2.0.5",
-    "github-markdown-css": "^2.8.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-router-dom": "^4.1.2",
-    "react-router-redux": "^4.0.8",
-    "redux-thunk": "^2.2.0"
+    "github-markdown-css": "^2.8.0"
   },
   "devDependencies": {
+    "webpack": "^3.8.1",
     "yhtml5-dev-utils": "^1.0.3",
-    "yhtml5-scripts": "0.0.10"
+    "yhtml5-scripts": "^0.2.9",
+    "yhtml5-test": "^0.1.11"
   },
   "engines": {
     "npm": ">= 3.0.0"
   },
   "scripts": {
-    "start": "yhtml5-scripts start",
     "dev": "yhtml5-scripts start",
+    "start": "yhtml5-scripts start",
     "build": "clear && yhtml5-scripts build",
     "build:pre": "clear && yhtml5-scripts build pre",
-    "update": "npm i yhtml5-dev-utils@latest -P",
+    "update": "npm i yhtml5-scripts@latest yhtml5-dev-utils@latest -P",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext .js,.jsx ./app/Containers",
     "precommit": "npm run test",
