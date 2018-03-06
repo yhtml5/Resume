@@ -14,9 +14,10 @@
     "github-markdown-css": "^2.8.0"
   },
   "devDependencies": {
+    "shelljs": "^0.8.1",
     "webpack": "^3.8.1",
     "yhtml5-dev-utils": "^1.0.3",
-    "yhtml5-scripts": "^0.2.9",
+    "yhtml5-scripts": "^0.2.11",
     "yhtml5-test": "^0.1.11"
   },
   "engines": {
@@ -28,6 +29,7 @@
     "build": "clear && yhtml5-scripts build",
     "build:pre": "clear && yhtml5-scripts build pre",
     "update": "npm i yhtml5-scripts@latest yhtml5-dev-utils@latest -P",
+    "sync": "node ./scripts/sync.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext .js,.jsx ./app/Containers",
     "precommit": "npm run test",
