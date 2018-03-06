@@ -32,6 +32,6 @@
     "lint": "eslint --ext .js,.jsx ./app/Containers",
     "precommit": "npm run test",
     "git": "clear && git status && git add . && git commit -m",
-    "postgit": "git pull && git push && git push origin dev:master"
+    "postgit": "git pull && echo \"\nwill push\n\" && git push && git push origin dev:master"
   }
 }
