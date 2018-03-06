@@ -65,6 +65,8 @@ jweixin-1.3.2 接口调研
 ## 小程序与webview交互
 * 小程序在`web-view`页面,退出再进入小程序, 会保留当前状态
 * **从A页面(内嵌H5), navigateTo B, 再navigateBack A, 会保留A页面的`<web-view>`状态**
+* 小程序 通知 webview: 执行改hash, 监听url变化
+* 小程序 通知 webview: jsBridge, url执行, 待验证
 
 以下细节
 * wx.navigateTo, 保留当前页面，跳转到应用内的某个页面, 会保留当前页面的`<web-view>`状态
@@ -86,20 +88,31 @@ A`<web-view>`进行到账单页, 点立即支付, 支付参数通过url navigate
 * 在B小程序支付页, 唤起支付失败 wx.navigateBack 到 A, 不会有返回键, 会保留A页面的`<web-view>`状态
 
 <div>
+<p>从A首页 redirectTo B<\web-view\><p>
 <img src="./images/homeToOrder1.png" width="30%">
 <img src="./images/homeToOrder2.png" width="30%">
 </div>
 
-<p>从A首页 redirectTo B<\web-view\><p>
+<br>
+<div>
+<p>从A<\web-view\> navigateTo B, navigateBack A<\web-view\><p>
+<img src="./images/order.jpeg" width="30%">
+<img src="./images/toPay.png" width="30%">
+<img src="./images/orderBack.jpeg" width="30%">
+</div>
 
 ------
 
 ## 点餐流程问题
-* 需要手动增加返回/刷新按钮, 页面出错/死胡同等情况需要
+* 需要手动增加返回, 页面会出现死胡同情况
+* 可能需要增加刷新按钮, 在弱网/js报错等情况下, 页面出错/空白等情况
 * 内嵌网页若有微信支付功不能直接支付
-* https 访问 http接口, 导致一些功能不能使用 
-* 必出现授权失败: MULTI_OAU061, 授权接口失败
+* https 访问 http接口, 导致一些功能不能使用 (线上全是https, 不会有这情况)
+* 火通卡, 附近的店, 需要授权 
+* H5需要授权, 小程序给token, 塞入内嵌H5 url中
+<!-- * 必出现授权失败: MULTI_OAU061, 授权接口失败 -->
 * 微信开发者工具调试不了`<web-view>`中的信息, 包括element, console, network; 可以使用h5页面中引入vConsole.js等工具
+* 动态修改title (暂时没问题)
 
 ### 解决方式
 * 使用小程序支付, 通过url传递支付参数给小程序支付页唤起支付
@@ -108,8 +121,8 @@ A`<web-view>`进行到账单页, 点立即支付, 支付参数通过url navigate
 
 参考: 
 
-<a herf="https://www.jianshu.com/p/aa29852ab695">微信小程序开发之webview组件内网页实现微信原生支付</a>
-<a herf="https://mp.weixin.qq.com/debug/wxadoc/dev/component/web-view.html">小程序web-view</a>
+<a href="https://www.jianshu.com/p/aa29852ab695">微信小程序开发之webview组件内网页实现微信原生支付</a>
+<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/component/web-view.html">小程序web-view</a>
 
 ------
 
@@ -131,5 +144,4 @@ A`<web-view>`进行到账单页, 点立即支付, 支付参数通过url navigate
 * 解决不受控的域名, https://api.l.whereask.com/hm => https://hm.baidu.com/hm.gif
 * 解决https访问http资源, https://api.l.whereask.com/api => http://api.l.whereask.com/api
 -->
-
 
