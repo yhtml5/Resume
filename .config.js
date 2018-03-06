@@ -9,7 +9,7 @@ const outputPath = `dist/${getVersion(packageJson.version)}`
 
 const envVar = {
   base: {
-    APP_TITLE: 'SPA'
+    APP_TITLE: 'MPA'
   },
   development: {
     customNodeEnv: 'development',
@@ -35,16 +35,26 @@ const config = {
   envVar: envVar,
   outputPath: outputPath,
   // host: './',
-  entry: 'src/index.js',
+  // entry: 'src/index.js',
   type: 'MPA',
   pages: [{
+    key: 'index',
     title: '前端开发丨张大漾',
-    entry: 'src/index.js',
-    template: 'src/pages/index.js'
+    entry: 'src/pages/yhtml5/index.js',
+    template: 'src/pages/yhtml5/template.js',
+    inlineSource: '.(js|css)$'
   }, {
+    key: 'luyan',
     title: '网页设计丨卢燕',
-    entry: 'src/luyan.js',
-    template: 'src/pages/luyan.js'
+    entry: 'src/pages/luyan/index.js',
+    template: 'src/pages/luyan/template.js',
+    inlineSource: '.(js|css)$'
+  }, {
+    key: 'report',
+    title: 'H5内嵌小程序调研报告',
+    entry: 'src/pages/h5MinProgramReport/index.js',
+    template: 'src/pages/h5MinProgramReport/template.js',
+    inlineSource: '.(js|css)$'
   }],
   // distributePort: 9993,
   test: {

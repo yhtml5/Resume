@@ -1,7 +1,8 @@
-const meta = require('./meta.html')
-const noscript = require('./noscript.html')
-const markdown = require('./luyan.md')
-const footer = require('../Components/Footer.html')
+const meta = require('../meta.html')
+const noscript = require('../noscript.html')
+const markdown = require('./README.md')
+const header = require('../../Components/Header.html')
+const footer = require('../../Components/Footer.html')
 
 const html = (templateParams) =>
   `<!DOCTYPE html>
@@ -12,6 +13,7 @@ const html = (templateParams) =>
       </head>
       <body>
         ${noscript}
+        ${header}
         <div id='body' class="main-content">
           ${markdown}
           ${footer}
