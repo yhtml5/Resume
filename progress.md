@@ -1,6 +1,4 @@
 ## progress
-
-- [ ] 增加英文简历
 - [ ] 删除不必要的文件
-- [ ] 维护一份简历
-- [ ] 增加简历版本
+- [ ] 分享资源放在百度云
+- [ ] 整合 java 面试 https://github.com/CyC2018/Interview-Notebook
