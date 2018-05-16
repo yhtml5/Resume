@@ -55,6 +55,12 @@ const config = {
     entry: 'src/pages/h5MinProgramReport/index.js',
     template: 'src/pages/h5MinProgramReport/template.js',
     inlineSource: '.(js|css)$'
+  }, {
+    key: 'staticBillReport',
+    title: '结账页快速定位解决问题方针',
+    entry: 'src/pages/staticBill/index.js',
+    template: 'src/pages/staticBill/template.js',
+    inlineSource: '.(js|css)$'
   }],
   // distributePort: 9993,
   test: {
