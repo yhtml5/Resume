@@ -38,7 +38,7 @@
 * 外卖账单异常, 交易中心/weixin-meal
 * 迟迟不反回结果, 交易中心/weixin-meal在断点调试
 * sub_appid, appid openId 不匹配
-* ERR_101550, 接口挂了 @wexin-meal
+* ERR_101550, 接口挂了 trade-platform/wexin-meal/trade-center; 也可能在发布中
 
 ### 页面异常对应api
 * 小费不显示: response.data.tipFeeRuleParam @交易中心
