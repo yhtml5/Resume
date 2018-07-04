@@ -11,14 +11,14 @@ const envVar = {
   base: {
     APP_TITLE: 'MPA'
   },
-  development: {
+  daily: {
     customNodeEnv: 'development',
     fileBaseUrl: '../../file',
     shareApiBaeUrl: 'http://api.l.whereask.com',
     gatewayApiBase: '//gateway.2dfire-daily.com',
     gatewayApiEnv: '13cccf8b7b58467da82163d3cf540ef7'
   },
-  production: {
+  pre: {
     customNodeEnv: 'production',
     fileBaseUrl: '../../file',
     shareApiBaeUrl: 'http://api.l.whereask.com',

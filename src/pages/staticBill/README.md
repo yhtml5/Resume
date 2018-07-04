@@ -34,7 +34,9 @@
 
 ### 接口错误
 * 502, @wexin-meal
-* 404, 调用api url 不正确
+* 404, @wexin-meal
+    * 调用api url 不正确
+    * 重启火小二nginx
 * 外卖账单异常, 交易中心/weixin-meal
 * 迟迟不反回结果, 交易中心/weixin-meal在断点调试
 * sub_appid, appid openId 不匹配
