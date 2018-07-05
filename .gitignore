@@ -1,10 +1,11 @@
 # custom
 logs/*
-/**/node_modules/
-/**/bower_components/
+node_modules
+bower_components
 npm-debug.log
-production/comparison.md
+production/other
 dist
+
 
 tmp
 .DS_Store
