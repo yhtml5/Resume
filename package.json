@@ -1,6 +1,6 @@
 {
   "name": "resume",
-  "version": "1.13.0",
+  "version": "1.14.0",
   "author": "yhtml5 <1417376255@qq.com>",
   "main": "app/",
   "license": "MIT",
@@ -34,6 +34,6 @@
     "lint": "eslint --ext .js,.jsx ./app/Containers",
     "precommit": "npm run test",
     "git": "clear && git status && git add . && git commit -m 'update'",
-    "postgit": "git pull && echo \"\nwill push\n\" && git push && git push origin dev:master"
+    "postgit": "git pull && echo \"\npushing\n\" && git push && git push origin dev:master"
   }
 }
