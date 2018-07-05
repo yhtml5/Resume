@@ -3,7 +3,7 @@ logs/*
 node_modules
 bower_components
 npm-debug.log
-production/other
+other
 dist
 
 
