@@ -4,8 +4,23 @@
   "author": "yhtml5 <1417376255@qq.com>",
   "main": "app/",
   "license": "MIT",
-  "description": "kyle's resume",
+  "description": "the resume of yhtml5",
   "repository": "git@github.com:yhtml5/YHTML5-Seed.git",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "yhtml5-scripts start",
+    "build": "webpack ./scripts/webpack.config.js",
+    "build:old": "clear && yhtml5-scripts build",
+    "build:pre": "clear && yhtml5-scripts build pre",
+    "update": "npm i yhtml5-scripts@latest yhtml5-dev-utils@latest -P",
+    "sync": "node ./scripts/sync.js",
+    "md": "node ./scripts/parseMarkdownToJs.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext .js,.jsx ./app/Containers",
+    "precommit": "npm run test",
+    "git": "clear && git status && git add . && git commit -m 'update'",
+    "postgit": "git pull && echo \"\npushing\n\" && git push && git push origin dev:master"
+  },
   "keywords": [
     "resume",
     "yhtml5"
@@ -14,26 +29,17 @@
     "github-markdown-css": "^2.8.0"
   },
   "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "markdown-loader": "^5.0.0",
+    "marked": "^0.6.0",
     "shelljs": "^0.8.1",
-    "webpack": "^3.8.1",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
     "yhtml5-dev-utils": "^1.0.3",
     "yhtml5-scripts": "^0.2.11",
     "yhtml5-test": "^0.1.11"
   },
   "engines": {
     "npm": ">= 3.0.0"
-  },
-  "scripts": {
-    "dev": "yhtml5-scripts start",
-    "start": "yhtml5-scripts start",
-    "build": "clear && yhtml5-scripts build",
-    "build:pre": "clear && yhtml5-scripts build pre",
-    "update": "npm i yhtml5-scripts@latest yhtml5-dev-utils@latest -P",
-    "sync": "node ./scripts/sync.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint --ext .js,.jsx ./app/Containers",
-    "precommit": "npm run test",
-    "git": "clear && git status && git add . && git commit -m 'update'",
-    "postgit": "git pull && echo \"\npushing\n\" && git push && git push origin dev:master"
   }
 }
