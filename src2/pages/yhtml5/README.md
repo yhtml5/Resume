@@ -6,6 +6,7 @@
 - 岗位: 前端
 - 在线简历: resume.yhtml5.com
 
+<!-- word-break: break-word; -->
 
 <!-- 大型项目研发经验
 解耦，业务上解耦
